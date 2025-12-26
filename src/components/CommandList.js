@@ -6,7 +6,7 @@ export default function CommandList() {
   useEffect(() => {
     async function fetchCommands() {
       try {
-        const res = await fetch('https://YOUR_USERNAME.github.io/YOUR_REPO/commands.json');
+        const res = await fetch('https://Nerderizer.github.io/Website-Twitch-Commands/commands.json');
         const data = await res.json();
         setCommands(data);
       } catch (err) {
