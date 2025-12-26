@@ -3,42 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <title>Streamer.bot Commands</title>
-<style>
-table { width:100%; border-collapse: collapse; }
-th, td { border:1px solid #444; padding:8px; text-align:left; }
-th { background:#333; color:#fff; }
-tr:nth-child(even) { background:#1e1e1e; color:#fff; }
-tr:hover { background:#444; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Enabled Streamer.bot Commands</h1>
-<table>
-<thead>
-<tr><th>Action Name</th><th>ID</th></tr>
-</thead>
-<tbody id="commandList"></tbody>
-</table>
+  <div class="container">
+    <h1>Enabled Streamer.bot Commands</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody id="commandList">
+        <!-- Commands will populate here -->
+      </tbody>
+    </table>
+    <p id="errorMessage" class="error"></p>
+  </div>
 
-<script>
-async function loadCommands() {
-    try {
-        const res = await fetch('https://Nerderizer.github.io/Website-Twitch-Commands/commands.json');
+  <script>
+    async function loadCommands() {
+      const errorEl = document.getElementById('errorMessage');
+      try {
+        const res = await fetch('commands.json'); // relative path
+        if (!res.ok) throw new Error("Failed to fetch JSON");
         const data = await res.json();
         const tbody = document.getElementById('commandList');
         tbody.innerHTML = '';
         data.forEach(c => {
-            const row = document.createElement('tr');
-            row.innerHTML = `<td>${c.Name}</td><td>${c.Id}</td>`;
-            tbody.appendChild(row);
+          const row = document.createElement('tr');
+          row.innerHTML = `<td>${c.Name}</td><td>${c.Description || ''}</td>`;
+          tbody.appendChild(row);
         });
-    } catch(err) {
+        errorEl.textContent = '';
+      } catch(err) {
         console.error("Failed to load commands:", err);
+        errorEl.textContent = 'Unable to load commands. Please try again later.';
+      }
     }
-}
 
-loadCommands();
-setInterval(loadCommands, 60000);
-</script>
+    loadCommands();
+    setInterval(loadCommands, 60000); // refresh every 60 seconds
+  </script>
 </body>
 </html>
