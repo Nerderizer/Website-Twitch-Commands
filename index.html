@@ -8,9 +8,7 @@
 <body>
   <div class="container">
     <h1>Streamer.bot Commands</h1>
-    <div id="commandSections">
-      <!-- Sections will be dynamically generated here -->
-    </div>
+    <div id="commandSections"></div>
     <p id="errorMessage" class="error"></p>
   </div>
 
@@ -18,10 +16,11 @@
     async function loadCommands() {
       const errorEl = document.getElementById('errorMessage');
       try {
-        const res = await fetch('commands.json'); // relative path in same repo
-        if (!res.ok) throw new Error("Failed to fetch JSON");
+        const res = await fetch('commands.json'); // relative path
+        if (!res.ok) throw new Error("Failed to fetch commands.json");
         const data = await res.json();
 
+        // Group commands by access level using brackets
         const sections = {
           "Everyone": [],
           "Subs Only": [],
@@ -29,18 +28,22 @@
           "Mods Only": []
         };
 
-        // Group commands by access
         data.forEach(cmd => {
-          if (sections[cmd.Access]) sections[cmd.Access].push(cmd);
-          else sections["Everyone"].push(cmd); // fallback
+          const match = cmd.match(/\[(.*)\]$/); // extract [Access] from end
+          const access = match ? match[1].trim() : "Everyone";
+          const name = match ? cmd.replace(/\[.*\]$/, '').trim() : cmd;
+          if (sections[access]) {
+            sections[access].push(name);
+          } else {
+            sections["Everyone"].push(name); // fallback
+          }
         });
 
         const container = document.getElementById('commandSections');
         container.innerHTML = '';
 
-        // Render each section
         Object.keys(sections).forEach(access => {
-          if (sections[access].length === 0) return; // skip empty sections
+          if (sections[access].length === 0) return;
 
           const sectionDiv = document.createElement('div');
           sectionDiv.className = 'section';
@@ -55,9 +58,9 @@
           table.appendChild(thead);
 
           const tbody = document.createElement('tbody');
-          sections[access].forEach(cmd => {
+          sections[access].forEach(name => {
             const row = document.createElement('tr');
-            row.innerHTML = `<td>${cmd.Name}</td>`;
+            row.innerHTML = `<td>${name}</td>`;
             tbody.appendChild(row);
           });
           table.appendChild(tbody);
@@ -67,14 +70,14 @@
         });
 
         errorEl.textContent = '';
-      } catch(err) {
-        console.error("Failed to load commands:", err);
+      } catch (err) {
+        console.error("Error loading commands:", err);
         errorEl.textContent = 'Unable to load commands. Please try again later.';
       }
     }
 
     loadCommands();
-    setInterval(loadCommands, 60000); // refresh every 60 seconds
+    setInterval(loadCommands, 60000); // refresh every 60s
   </script>
 </body>
 </html>
