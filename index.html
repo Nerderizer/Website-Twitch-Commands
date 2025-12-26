@@ -7,18 +7,10 @@
 </head>
 <body>
   <div class="container">
-    <h1>Enabled Streamer.bot Commands</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Command</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody id="commandList">
-        <!-- Commands will populate here -->
-      </tbody>
-    </table>
+    <h1>Streamer.bot Commands</h1>
+    <div id="commandSections">
+      <!-- Sections will be dynamically generated here -->
+    </div>
     <p id="errorMessage" class="error"></p>
   </div>
 
@@ -26,16 +18,54 @@
     async function loadCommands() {
       const errorEl = document.getElementById('errorMessage');
       try {
-        const res = await fetch('commands.json'); // relative path
+        const res = await fetch('commands.json'); // relative path in same repo
         if (!res.ok) throw new Error("Failed to fetch JSON");
         const data = await res.json();
-        const tbody = document.getElementById('commandList');
-        tbody.innerHTML = '';
-        data.forEach(c => {
-          const row = document.createElement('tr');
-          row.innerHTML = `<td>${c.Name}</td><td>${c.Description || ''}</td>`;
-          tbody.appendChild(row);
+
+        const sections = {
+          "Everyone": [],
+          "Subs Only": [],
+          "VIP Only": [],
+          "Mods Only": []
+        };
+
+        // Group commands by access
+        data.forEach(cmd => {
+          if (sections[cmd.Access]) sections[cmd.Access].push(cmd);
+          else sections["Everyone"].push(cmd); // fallback
         });
+
+        const container = document.getElementById('commandSections');
+        container.innerHTML = '';
+
+        // Render each section
+        Object.keys(sections).forEach(access => {
+          if (sections[access].length === 0) return; // skip empty sections
+
+          const sectionDiv = document.createElement('div');
+          sectionDiv.className = 'section';
+
+          const header = document.createElement('h2');
+          header.textContent = access;
+          sectionDiv.appendChild(header);
+
+          const table = document.createElement('table');
+          const thead = document.createElement('thead');
+          thead.innerHTML = "<tr><th>Command</th></tr>";
+          table.appendChild(thead);
+
+          const tbody = document.createElement('tbody');
+          sections[access].forEach(cmd => {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${cmd.Name}</td>`;
+            tbody.appendChild(row);
+          });
+          table.appendChild(tbody);
+
+          sectionDiv.appendChild(table);
+          container.appendChild(sectionDiv);
+        });
+
         errorEl.textContent = '';
       } catch(err) {
         console.error("Failed to load commands:", err);
