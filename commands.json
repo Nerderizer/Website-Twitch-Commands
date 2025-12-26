@@ -5,6 +5,11 @@
     "Access": "Everyone"
   },
   {
+    "Name": "!analyze",
+    "Description": "!analyze",
+    "Access": "Everyone"
+  },
+  {
     "Name": "!boop",
     "Description": "!boop",
     "Access": "Everyone"
@@ -12,6 +17,11 @@
   {
     "Name": "!boops",
     "Description": "!boops",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!CC",
+    "Description": "!CC",
     "Access": "Everyone"
   },
   {
@@ -60,6 +70,11 @@
     "Access": "Everyone"
   },
   {
+    "Name": "!gifters",
+    "Description": "!gifters",
+    "Access": "Everyone"
+  },
+  {
     "Name": "!guess",
     "Description": "!guess",
     "Access": "Everyone"
@@ -72,6 +87,11 @@
   {
     "Name": "!headpats",
     "Description": "!headpats",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!howdy",
+    "Description": "!howdy",
     "Access": "Everyone"
   },
   {
@@ -197,6 +217,11 @@
   {
     "Name": "!sub",
     "Description": "!sub",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!subgoal",
+    "Description": "!subgoal",
     "Access": "Everyone"
   },
   {
