@@ -1,1 +1,287 @@
-
+[
+  {
+    "Name": "!add item",
+    "Description": "!add item",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!analyze",
+    "Description": "!analyze",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!boop",
+    "Description": "!boop",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!boops",
+    "Description": "!boops",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!CC",
+    "Description": "!CC",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!clip",
+    "Description": "!clip",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!command",
+    "Description": "!command",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!commands",
+    "Description": "!commands",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!consent",
+    "Description": "!consent",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!cuddle",
+    "Description": "!cuddle",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!cuddles",
+    "Description": "!cuddles",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!discord",
+    "Description": "!discord",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!first",
+    "Description": "!first",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!followage",
+    "Description": "!followage",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!gifters",
+    "Description": "!gifters",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!guess",
+    "Description": "!guess",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!headpat",
+    "Description": "!headpat",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!headpats",
+    "Description": "!headpats",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!howdy",
+    "Description": "!howdy",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!hug",
+    "Description": "!hug",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!hugs",
+    "Description": "!hugs",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!inv",
+    "Description": "!inv",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!inventory",
+    "Description": "!inventory",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!items",
+    "Description": "!items",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!lick",
+    "Description": "!lick",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!licks",
+    "Description": "!licks",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!lurk",
+    "Description": "!lurk",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!meme",
+    "Description": "!meme",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!memes",
+    "Description": "!memes",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!moan",
+    "Description": "!moan",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!moans",
+    "Description": "!moans",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!Multi",
+    "Description": "!Multi",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!MutliStream",
+    "Description": "!MutliStream",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!quote",
+    "Description": "!quote",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!remove item",
+    "Description": "!remove item",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!setgame",
+    "Description": "!setgame",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!settitle",
+    "Description": "!settitle",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!slap",
+    "Description": "!slap",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!so",
+    "Description": "!so",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!social",
+    "Description": "!social",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!socials",
+    "Description": "!socials",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!spank",
+    "Description": "!spank",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!spanks",
+    "Description": "!spanks",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!sub",
+    "Description": "!sub",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!subgoal",
+    "Description": "!subgoal",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!throw",
+    "Description": "!throw",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!tickle",
+    "Description": "!tickle",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!tickles",
+    "Description": "!tickles",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!tp",
+    "Description": "!tp",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!trivia",
+    "Description": "!trivia",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!triviapoints",
+    "Description": "!triviapoints",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!unlurk",
+    "Description": "!unlurk",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!unmute",
+    "Description": "!unmute",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!use",
+    "Description": "!use",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!whip",
+    "Description": "!whip",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "!whips",
+    "Description": "!whips",
+    "Access": "Everyone"
+  },
+  {
+    "Name": "brb",
+    "Description": "brb",
+    "Access": "Everyone"
+  }
+]
