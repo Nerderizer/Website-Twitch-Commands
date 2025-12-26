@@ -1,0 +1,342 @@
+[
+  {
+    "Name": "Start Stream Insert Coin",
+    "Id": "9e81282e-4663-4c08-99f5-bd1811372e63"
+  },
+  {
+    "Name": "First!",
+    "Id": "8ffab17e-c787-410e-9a59-131340ca6419"
+  },
+  {
+    "Name": "Take Coins from Chat",
+    "Id": "02f60730-f5a6-4527-8a61-4880d30f2aa5"
+  },
+  {
+    "Name": "Give Coins to Chat",
+    "Id": "e8a4a01c-7b50-4efd-9d4e-909eb52975b5"
+  },
+  {
+    "Name": "BRB",
+    "Id": "7edbb415-a84c-44e5-b072-1a693491eeab"
+  },
+  {
+    "Name": "END",
+    "Id": "34c45f88-13c4-4f35-b286-6736be0013a5"
+  },
+  {
+    "Name": "AI Shower Thoughts",
+    "Id": "6c0c6724-1724-4c23-acd7-51456eb8da78"
+  },
+  {
+    "Name": "BOT MSG - Discord",
+    "Id": "47581d9a-99c3-4e16-a259-0e85075114f0"
+  },
+  {
+    "Name": "BOT MSG - Socials",
+    "Id": "91450ea9-cd12-4184-84c1-cded43109ab3"
+  },
+  {
+    "Name": "BOT MSG - Sub",
+    "Id": "debdaea2-b00b-4b6b-9e71-855a7b3a9b69"
+  },
+  {
+    "Name": "Set game",
+    "Id": "aa0e6bc9-2480-4c65-b262-20620269ac09"
+  },
+  {
+    "Name": "Set game fail",
+    "Id": "88f64409-b8be-4b45-b642-605038962209"
+  },
+  {
+    "Name": "Set Title",
+    "Id": "e19537ec-e6f9-4831-8cef-10df9f7584a4"
+  },
+  {
+    "Name": "START RECORDING",
+    "Id": "8b677a20-a107-4b17-acfb-875903b9449c"
+  },
+  {
+    "Name": "STOP RECORDING",
+    "Id": "4b91eb80-dfb3-4de6-9b95-a5ec55ed48bd"
+  },
+  {
+    "Name": "Daily Check-In",
+    "Id": "62052969-7b7d-43b1-b9a5-48abff25e993"
+  },
+  {
+    "Name": "Remove Item",
+    "Id": "e8319190-febf-497b-bee1-204ebed1d443"
+  },
+  {
+    "Name": "Loot (Channel Point Reward)",
+    "Id": "7e238772-65fc-4c12-8ed8-45d14426f77d"
+  },
+  {
+    "Name": "Get Items",
+    "Id": "daa41f09-5915-4dae-85ae-b63eb9744668"
+  },
+  {
+    "Name": "Add Item",
+    "Id": "b2453d17-ecd6-4760-876b-31be585bb016"
+  },
+  {
+    "Name": "Use Item",
+    "Id": "a22b00f8-d88d-4b92-bd26-7439d9eca21b"
+  },
+  {
+    "Name": "Rubber Ducky Use",
+    "Id": "69a6977c-148e-42a6-ae33-20531544d1eb"
+  },
+  {
+    "Name": "VIP Use",
+    "Id": "50a3d148-2ec1-484f-8cf1-db6df539e9ea"
+  },
+  {
+    "Name": "Rubber Ducky Throw",
+    "Id": "d9b6c0f5-81b4-4b68-9c96-1324bff4bcbc"
+  },
+  {
+    "Name": "VIP Throw",
+    "Id": "e782410b-4f22-4176-bc66-7861964a09ec"
+  },
+  {
+    "Name": "BOT MSG - Commands",
+    "Id": "4916608e-e022-4415-b57c-d79a9e8f3aa2"
+  },
+  {
+    "Name": "Lurk",
+    "Id": "a29ac727-95b0-4d55-ad61-2176b28f1c12"
+  },
+  {
+    "Name": "Unlurk",
+    "Id": "96506140-a504-4638-9f35-c4afcf92e006"
+  },
+  {
+    "Name": "Random Game Trivia AnswerHandler",
+    "Id": "8d640e93-14a3-4831-a3f1-f283c4c67427"
+  },
+  {
+    "Name": "Random Game Trivia",
+    "Id": "5adbbf07-d00e-4f9e-9194-9e89125c9069"
+  },
+  {
+    "Name": "Random Game Trivia GetPoints",
+    "Id": "3c00d859-06b5-41b7-b8d3-6f4f44b7b8bf"
+  },
+  {
+    "Name": "Dance Party",
+    "Id": "efd6ade6-04cd-4170-b3eb-5642d829d504"
+  },
+  {
+    "Name": "Face Tracker",
+    "Id": "72a30f93-becd-4390-a620-3756b411d2f6"
+  },
+  {
+    "Name": "Vault Boy",
+    "Id": "456b8f68-6d4c-4ab3-8bdc-c373b011906b"
+  },
+  {
+    "Name": "Steam Game Reviews",
+    "Id": "f7a1b3dc-942c-4d19-a758-f8c85d34c806"
+  },
+  {
+    "Name": "Mute Idle Video",
+    "Id": "1d72a14e-fda4-47a7-8daf-42dd3d3064ae"
+  },
+  {
+    "Name": "IDGB Get Current Game Info",
+    "Id": "f994d627-67bb-4bfd-920b-47efc765f8c9"
+  },
+  {
+    "Name": "Ad Break Coming",
+    "Id": "aab3fb24-5a4d-4c6c-8299-4bcffcb70304"
+  },
+  {
+    "Name": "Ad Break Starting",
+    "Id": "39f8c240-d9d4-43aa-83ae-8bdf22900d92"
+  },
+  {
+    "Name": "FollowAge",
+    "Id": "395ba366-2958-4abf-b399-536d8368d62d"
+  },
+  {
+    "Name": "Twitch Game Change Starting Soon",
+    "Id": "6fa7dea4-dec9-4ac6-bf46-dbecffd9719a"
+  },
+  {
+    "Name": "Quote Add to Discord and DB",
+    "Id": "bfca5f1a-2e6a-4843-839b-0ac3ab7020c6"
+  },
+  {
+    "Name": "Quote get random",
+    "Id": "6bb4234c-3100-4067-952a-5b0d816b17e8"
+  },
+  {
+    "Name": "Quote get specific",
+    "Id": "f710d22e-ef29-4add-ba29-b898da2156ef"
+  },
+  {
+    "Name": "Game Change Updates",
+    "Id": "9a675020-3167-463c-be6d-43ef9251e14a"
+  },
+  {
+    "Name": "Twitch Clip Scan for New Clips",
+    "Id": "eef25652-3bb1-4a13-81d7-eff5cc81f1a0"
+  },
+  {
+    "Name": "Twitch Clip Last 30 Seconds",
+    "Id": "1bddf228-0d87-4592-bf83-4dcdf677ccb4"
+  },
+  {
+    "Name": "Twitch Clip New Clip Found",
+    "Id": "94ad87ff-7b7f-47ac-87c1-fce5d671785b"
+  },
+  {
+    "Name": "Average Viewers",
+    "Id": "6557ddcb-99c8-47e9-bfed-6a8e3d6a94c7"
+  },
+  {
+    "Name": "gameName",
+    "Id": "b6aeec76-91bc-4f72-b6f6-1bdc969b9acc"
+  },
+  {
+    "Name": "viewerCount",
+    "Id": "34619ff9-e495-451b-8b7c-6615034bd064"
+  },
+  {
+    "Name": "TriviaGameHandler",
+    "Id": "29939a71-b30d-4ab1-9e67-8a14f3b1b251"
+  },
+  {
+    "Name": "Unmute",
+    "Id": "39ab261f-1ef9-4f4f-b8d2-e0dbb9628d78"
+  },
+  {
+    "Name": "Wash your hands!",
+    "Id": "0d1260d1-52b4-4136-8f8f-ae0f27ed8359"
+  },
+  {
+    "Name": "Slap",
+    "Id": "0d7207c7-2031-4785-ae55-f0753acd4202"
+  },
+  {
+    "Name": "Unmute Idle Video",
+    "Id": "a50210d3-c5f0-4d82-8ea7-6d1e969207d6"
+  },
+  {
+    "Name": "Get Commands",
+    "Id": "63e71a97-8d1a-4d99-8db3-7fe8215f9bed"
+  },
+  {
+    "Name": "Stream start resets",
+    "Id": "42f95352-121e-4c2e-9fdd-a77c4cd92815"
+  },
+  {
+    "Name": "AI Game Commentator",
+    "Id": "cd3097fe-6ab1-4636-8eb3-342a98c53adf"
+  },
+  {
+    "Name": "Chat action-hug",
+    "Id": "5bd96acd-65f9-4f17-bca1-e9c8431e7b08"
+  },
+  {
+    "Name": "Chat action - fail - Invalid user error",
+    "Id": "a74f9837-927d-44eb-98f0-c4936260da6b"
+  },
+  {
+    "Name": "Chat action - fail - no consent",
+    "Id": "db1bbf4e-3b98-407c-9a47-ae2eeadc3581"
+  },
+  {
+    "Name": "Chat action- fail - no consent by redeemer",
+    "Id": "8dfb8fcc-03e3-4209-8ddd-e8067edf89ad"
+  },
+  {
+    "Name": "Chat action - consent",
+    "Id": "fe7c357a-94cf-45d0-99af-37619cfce7ca"
+  },
+  {
+    "Name": "Chat action-boop",
+    "Id": "5ddea2ef-87ad-42f6-9980-e6849987d337"
+  },
+  {
+    "Name": "Chat action-tickle",
+    "Id": "dcc9e00e-4551-4ff7-a3a1-b7450b6c6622"
+  },
+  {
+    "Name": "Chat action-meme",
+    "Id": "a91a1411-eac3-48aa-a8f5-b2746eaa9cfb"
+  },
+  {
+    "Name": "Chat action-spank",
+    "Id": "f0e7fb4a-743f-4e77-9710-7e3f0596f367"
+  },
+  {
+    "Name": "Chat action-whip",
+    "Id": "e0de570d-b066-47e7-bc07-122ce676bdad"
+  },
+  {
+    "Name": "Chat action-cuddle",
+    "Id": "3abca0cb-8129-48a6-922c-8d7692c01d24"
+  },
+  {
+    "Name": "Chat action-headpat",
+    "Id": "c077a182-44ec-4114-a72d-0ecbab0e0e57"
+  },
+  {
+    "Name": "Chat action-moan",
+    "Id": "71da3c46-3b35-4595-835c-53e2866a7a5e"
+  },
+  {
+    "Name": "Chat action-lick",
+    "Id": "14227d68-4825-45dd-838b-c49eccae2862"
+  },
+  {
+    "Name": "Ended",
+    "Id": "fee245eb-2f59-4d23-b96b-ab11b04b5249"
+  },
+  {
+    "Name": "Started",
+    "Id": "12c018af-bc95-4a05-a2bb-e30ec810d970"
+  },
+  {
+    "Name": "Whos That Pokemon",
+    "Id": "94f367f1-3fdc-4a1c-9d7f-155fb98ccdc3"
+  },
+  {
+    "Name": "Howdy Command",
+    "Id": "f4e32517-97dc-4e8f-976b-9aa108664c6a"
+  },
+  {
+    "Name": "Daily Sub Counter",
+    "Id": "b20a9930-2f84-4b87-a5b9-b08466102650"
+  },
+  {
+    "Name": "Reset Daily Sub Goal",
+    "Id": "12c19197-6dc2-4d1f-b079-53ef0b3e8a8c"
+  },
+  {
+    "Name": "Update Top Donors List",
+    "Id": "0c401f8b-c0ab-489f-af25-831a8e2e6974"
+  },
+  {
+    "Name": "Track Top Bitter",
+    "Id": "50e3c39d-925f-4563-985b-cf01df78639e"
+  },
+  {
+    "Name": "Bot App Access Token",
+    "Id": "84c3de4e-70dc-4295-bfa1-9b981f37bfd9"
+  },
+  {
+    "Name": "Streamer.bot Start",
+    "Id": "3305b58d-81bb-41fe-aa70-5b15fba0eed1"
+  },
+  {
+    "Name": "Friendsgiving message",
+    "Id": "51c47f35-3f04-49ff-8a89-42db70e4aed6"
+  },
+  {
+    "Name": "Push Commands to Github",
+    "Id": "0758aa0e-dd6f-4ced-9533-106340076c5b"
+  }
+]
