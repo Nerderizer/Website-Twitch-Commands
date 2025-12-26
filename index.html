@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Streamer.bot Commands</title>
+<style>
+table { width:100%; border-collapse: collapse; }
+th, td { border:1px solid #444; padding:8px; text-align:left; }
+th { background:#333; color:#fff; }
+tr:nth-child(even) { background:#1e1e1e; color:#fff; }
+tr:hover { background:#444; }
+</style>
+</head>
+<body>
+<h1>Enabled Streamer.bot Commands</h1>
+<table>
+<thead>
+<tr><th>Action Name</th><th>ID</th></tr>
+</thead>
+<tbody id="commandList"></tbody>
+</table>
+
+<script>
+async function loadCommands() {
+    try {
+        const res = await fetch('https://YOUR_USERNAME.github.io/Website-Twitch-Commands/commands.json');
+        const data = await res.json();
+        const tbody = document.getElementById('commandList');
+        tbody.innerHTML = '';
+        data.forEach(c => {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${c.Name}</td><td>${c.Id}</td>`;
+            tbody.appendChild(row);
+        });
+    } catch(err) {
+        console.error("Failed to load commands:", err);
+    }
+}
+
+loadCommands();
+setInterval(loadCommands, 60000);
+</script>
+</body>
+</html>
