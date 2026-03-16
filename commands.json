@@ -1,1 +1,278 @@
-[]
+[
+  {
+    "Trigger": "!CC",
+    "Description": "Crowd Control",
+    "Group": "Chat Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!howdy",
+    "Description": "!howdy",
+    "Group": "Chat Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!slap",
+    "Description": "Slap",
+    "Group": "Chat Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!boop, !boops",
+    "Description": "Boop",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!consent",
+    "Description": "Consent",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!cuddle, !cuddles",
+    "Description": "Cuddle",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!headpat, !headpats",
+    "Description": "Headpat",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!hug, !hugs",
+    "Description": "Hug",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!lick, !licks",
+    "Description": "Lick",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!meme, !memes",
+    "Description": "Meme",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!moan, !moans",
+    "Description": "Moan",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!spank, !spanks",
+    "Description": "Spank",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!tickle, !tickles",
+    "Description": "Tickle",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!whip, !whips",
+    "Description": "Whip",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!analyze ",
+    "Description": "!analyze",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!end",
+    "Description": "END",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!setgame",
+    "Description": "Set Game Name",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!settitle",
+    "Description": "Set Stream Title",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!so",
+    "Description": "Shoutout",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!unmute",
+    "Description": "Unmute",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "brb",
+    "Description": "WashYoHands",
+    "Group": "Passive",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "what game",
+    "Description": "What game?",
+    "Group": "Passive",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!quote",
+    "Description": "Quote Display",
+    "Group": "Searchable Quotes",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!quoteAdd, !addQuote",
+    "Description": "Quote Add",
+    "Group": "Searchable Quotes",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!quoteDel, !delQuote",
+    "Description": "Quote Delete",
+    "Group": "Searchable Quotes",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!quoteMode",
+    "Description": "Quote Numbering Mode",
+    "Group": "Searchable Quotes",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!vcard",
+    "Description": "Valentine's Card",
+    "Group": "Seasonal",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!gifters",
+    "Description": "!gifters",
+    "Group": "Subathon",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!subgoal",
+    "Description": "!subgoal",
+    "Group": "Subathon",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!add item",
+    "Description": "Add Item",
+    "Group": "Twitch Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!discord",
+    "Description": "Discord Link",
+    "Group": "Twitch Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!items, !inv, !inventory",
+    "Description": "Get Items",
+    "Group": "Twitch Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!remove item",
+    "Description": "Remove Item",
+    "Group": "Twitch Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!socials, !social",
+    "Description": "Socials",
+    "Group": "Twitch Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!sub",
+    "Description": "Sub Reminder",
+    "Group": "Twitch Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!clip",
+    "Description": "Clip to Chat/Discord",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!command, !commands",
+    "Description": "Commands List",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!followage",
+    "Description": "FollowAge",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!lurk",
+    "Description": "Lurk",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!Multi, !MutliStream",
+    "Description": "!Multi, !MutliStream",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!quote",
+    "Description": "Quote",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!triviapoints",
+    "Description": "!triviapoints",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!unlurk",
+    "Description": "Unlurk",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!first",
+    "Description": "First for stream",
+    "Group": "YT Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!guess",
+    "Description": "!guess",
+    "Group": "YT Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!trivia",
+    "Description": "Random Game Trivia",
+    "Group": "YT Commands",
+    "Permissions": "Everyone"
+  }
+]
