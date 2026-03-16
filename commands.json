@@ -133,7 +133,7 @@
   },
   {
     "Trigger": "!so",
-    "Description": "Shoutout",
+    "Description": "Give a Shoutout to a Streamer!",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
