@@ -1,19 +1,7 @@
 [
   {
-    "Trigger": "!CC",
-    "Description": "Crowd Control",
-    "Group": "Chat Commands",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!howdy",
-    "Description": "!howdy",
-    "Group": "Chat Commands",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!slap",
-    "Description": "Slap",
+    "Description": "Say hi and get a response from VirtualID10T!",
     "Group": "Chat Commands",
     "Permissions": "Everyone"
   },
@@ -66,6 +54,12 @@
     "Permissions": "Everyone"
   },
   {
+    "Trigger": "!slap",
+    "Description": "Slap",
+    "Group": "Interactive Commands w/ Consent",
+    "Permissions": "Everyone"
+  },
+  {
     "Trigger": "!spank, !spanks",
     "Description": "Spank",
     "Group": "Interactive Commands w/ Consent",
@@ -92,6 +86,30 @@
   {
     "Trigger": "!end",
     "Description": "END",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!quote",
+    "Description": "Quote Display",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!quoteAdd, !addQuote",
+    "Description": "Quote Add",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!quoteDel, !delQuote",
+    "Description": "Quote Delete",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!quoteMode",
+    "Description": "Quote Numbering Mode",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
@@ -129,30 +147,6 @@
     "Trigger": "what game",
     "Description": "What game?",
     "Group": "Passive",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!quote",
-    "Description": "Quote Display",
-    "Group": "Searchable Quotes",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!quoteAdd, !addQuote",
-    "Description": "Quote Add",
-    "Group": "Searchable Quotes",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!quoteDel, !delQuote",
-    "Description": "Quote Delete",
-    "Group": "Searchable Quotes",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!quoteMode",
-    "Description": "Quote Numbering Mode",
-    "Group": "Searchable Quotes",
     "Permissions": "Everyone"
   },
   {
@@ -255,24 +249,6 @@
     "Trigger": "!unlurk",
     "Description": "Unlurk",
     "Group": "Viewer Commands",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!first",
-    "Description": "First for stream",
-    "Group": "YT Commands",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!guess",
-    "Description": "!guess",
-    "Group": "YT Commands",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!trivia",
-    "Description": "Random Game Trivia",
-    "Group": "YT Commands",
     "Permissions": "Everyone"
   }
 ]
