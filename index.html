@@ -5,79 +5,167 @@
 <title>Streamer.bot Commands</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>Streamer.bot Commands</h1>
-    <div id="commandSections"></div>
-    <p id="errorMessage" class="error"></p>
-  </div>
+<div class="container">
 
-  <script>
-    async function loadCommands() {
-      const errorEl = document.getElementById('errorMessage');
-      try {
-        const res = await fetch('commands.json'); // relative path
-        if (!res.ok) throw new Error("Failed to fetch commands.json");
-        const data = await res.json();
+<h1>Streamer.bot Commands</h1>
 
-        // Group commands by access level using brackets
-        const sections = {
-          "Everyone": [],
-          "Subs Only": [],
-          "VIP Only": [],
-          "Mods Only": []
-        };
+<input
+  type="text"
+  id="searchBox"
+  placeholder="Search commands..."
+>
 
-        data.forEach(cmd => {
-          const match = cmd.match(/\[(.*)\]$/); // extract [Access] from end
-          const access = match ? match[1].trim() : "Everyone";
-          const name = match ? cmd.replace(/\[.*\]$/, '').trim() : cmd;
-          if (sections[access]) {
-            sections[access].push(name);
-          } else {
-            sections["Everyone"].push(name); // fallback
-          }
-        });
+<div id="commandSections"></div>
 
-        const container = document.getElementById('commandSections');
-        container.innerHTML = '';
+<p id="errorMessage" class="error"></p>
 
-        Object.keys(sections).forEach(access => {
-          if (sections[access].length === 0) return;
+</div>
 
-          const sectionDiv = document.createElement('div');
-          sectionDiv.className = 'section';
+<script>
 
-          const header = document.createElement('h2');
-          header.textContent = access;
-          sectionDiv.appendChild(header);
+let allCommands = [];
 
-          const table = document.createElement('table');
-          const thead = document.createElement('thead');
-          thead.innerHTML = "<tr><th>Command</th></tr>";
-          table.appendChild(thead);
+async function loadCommands() {
 
-          const tbody = document.createElement('tbody');
-          sections[access].forEach(name => {
-            const row = document.createElement('tr');
-            row.innerHTML = `<td>${name}</td>`;
-            tbody.appendChild(row);
-          });
-          table.appendChild(tbody);
+  const errorEl = document.getElementById("errorMessage");
 
-          sectionDiv.appendChild(table);
-          container.appendChild(sectionDiv);
-        });
+  try {
 
-        errorEl.textContent = '';
-      } catch (err) {
-        console.error("Error loading commands:", err);
-        errorEl.textContent = 'Unable to load commands. Please try again later.';
-      }
+    const res = await fetch("commands.json");
+
+    if (!res.ok) throw new Error("Failed to fetch commands.json");
+
+    const data = await res.json();
+
+    if (!Array.isArray(data)) {
+      throw new Error("commands.json must contain an array");
     }
 
-    loadCommands();
-    setInterval(loadCommands, 60000); // refresh every 60s
-  </script>
+    allCommands = data;
+
+    renderCommands(allCommands);
+
+    errorEl.textContent = "";
+
+  } catch (err) {
+
+    console.error("Error loading commands:", err);
+
+    errorEl.textContent =
+      "Unable to load commands. Please try again later.";
+
+  }
+
+}
+
+function renderCommands(commands) {
+
+  const container = document.getElementById("commandSections");
+
+  container.innerHTML = "";
+
+  const sections = {};
+
+  commands.forEach(cmd => {
+
+    const name = cmd.Name || "";
+    const description = cmd.Description || "";
+    const access = cmd.Access || "Other";
+
+    if (!sections[access]) {
+      sections[access] = [];
+    }
+
+    sections[access].push({ name, description });
+
+  });
+
+  Object.keys(sections)
+    .sort()
+    .forEach(access => {
+
+      const sectionCommands = sections[access];
+
+      sectionCommands.sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
+
+      const sectionDiv = document.createElement("div");
+      sectionDiv.className = "section";
+
+      const header = document.createElement("h2");
+      header.textContent = access;
+
+      sectionDiv.appendChild(header);
+
+      const table = document.createElement("table");
+
+      const thead = document.createElement("thead");
+
+      thead.innerHTML = `
+        <tr>
+          <th>Command</th>
+          <th>Description</th>
+        </tr>
+      `;
+
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+
+      sectionCommands.forEach(cmd => {
+
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+          <td>${cmd.name}</td>
+          <td>${cmd.description}</td>
+        `;
+
+        tbody.appendChild(row);
+
+      });
+
+      table.appendChild(tbody);
+
+      sectionDiv.appendChild(table);
+
+      container.appendChild(sectionDiv);
+
+    });
+
+}
+
+function searchCommands() {
+
+  const query =
+    document
+      .getElementById("searchBox")
+      .value
+      .toLowerCase();
+
+  const filtered = allCommands.filter(cmd =>
+
+    cmd.Name.toLowerCase().includes(query) ||
+    cmd.Description.toLowerCase().includes(query) ||
+    cmd.Access.toLowerCase().includes(query)
+
+  );
+
+  renderCommands(filtered);
+
+}
+
+document
+  .getElementById("searchBox")
+  .addEventListener("input", searchCommands);
+
+loadCommands();
+
+setInterval(loadCommands, 60000);
+
+</script>
 </body>
 </html>
