@@ -1,11 +1,5 @@
 [
   {
-    "Trigger": "!howdy",
-    "Description": "Say hi and get a response from VirtualID10T!",
-    "Group": "Chat Commands",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!boop, !boops",
     "Description": "Boop",
     "Group": "Interactive Commands w/ Consent",
@@ -78,6 +72,12 @@
     "Permissions": "Everyone"
   },
   {
+    "Trigger": "!add item",
+    "Description": "Add Item",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
     "Trigger": "!analyze ",
     "Description": "!analyze",
     "Group": "Mod Commands",
@@ -110,6 +110,12 @@
   {
     "Trigger": "!quoteMode",
     "Description": "Quote Numbering Mode",
+    "Group": "Mod Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!remove item",
+    "Description": "Remove Item",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
@@ -168,42 +174,6 @@
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!add item",
-    "Description": "Add Item",
-    "Group": "Twitch Commands",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!discord",
-    "Description": "Discord Link",
-    "Group": "Twitch Commands",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!items, !inv, !inventory",
-    "Description": "Get Items",
-    "Group": "Twitch Commands",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!remove item",
-    "Description": "Remove Item",
-    "Group": "Twitch Commands",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!socials, !social",
-    "Description": "Socials",
-    "Group": "Twitch Commands",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!sub",
-    "Description": "Sub Reminder",
-    "Group": "Twitch Commands",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!clip",
     "Description": "Clip to Chat/Discord",
     "Group": "Viewer Commands",
@@ -216,8 +186,26 @@
     "Permissions": "Everyone"
   },
   {
+    "Trigger": "!discord",
+    "Description": "Discord Link",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
     "Trigger": "!followage",
     "Description": "FollowAge",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!howdy",
+    "Description": "Say hi and get a response from VirtualID10T!",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!items, !inv, !inventory",
+    "Description": "Get Items",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
@@ -236,6 +224,18 @@
   {
     "Trigger": "!quote",
     "Description": "Quote",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!socials, !social",
+    "Description": "Socials",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!sub",
+    "Description": "Sub Reminder",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
