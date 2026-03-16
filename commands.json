@@ -1,287 +1,232 @@
 [
   {
-    "Name": "!add item",
-    "Description": "!add item",
-    "Access": "Everyone"
+    "Name": "!howdy",
+    "Description": "Type !howdy in chat.",
+    "Access": "Chat Commands"
+  },
+  {
+    "Name": "Crowd Control",
+    "Description": "Type Crowd Control in chat.",
+    "Access": "Chat Commands"
+  },
+  {
+    "Name": "Slap",
+    "Description": "Type Slap in chat.",
+    "Access": "Chat Commands"
+  },
+  {
+    "Name": "Boop",
+    "Description": "Type Boop in chat.",
+    "Access": "Interactive Commands w/ Consent"
+  },
+  {
+    "Name": "Consent",
+    "Description": "Type Consent in chat.",
+    "Access": "Interactive Commands w/ Consent"
+  },
+  {
+    "Name": "Cuddle",
+    "Description": "Type Cuddle in chat.",
+    "Access": "Interactive Commands w/ Consent"
+  },
+  {
+    "Name": "Headpat",
+    "Description": "Type Headpat in chat.",
+    "Access": "Interactive Commands w/ Consent"
+  },
+  {
+    "Name": "Hug",
+    "Description": "Type Hug in chat.",
+    "Access": "Interactive Commands w/ Consent"
+  },
+  {
+    "Name": "Lick",
+    "Description": "Type Lick in chat.",
+    "Access": "Interactive Commands w/ Consent"
+  },
+  {
+    "Name": "Meme",
+    "Description": "Type Meme in chat.",
+    "Access": "Interactive Commands w/ Consent"
+  },
+  {
+    "Name": "Moan",
+    "Description": "Type Moan in chat.",
+    "Access": "Interactive Commands w/ Consent"
+  },
+  {
+    "Name": "Spank",
+    "Description": "Type Spank in chat.",
+    "Access": "Interactive Commands w/ Consent"
+  },
+  {
+    "Name": "Tickle",
+    "Description": "Type Tickle in chat.",
+    "Access": "Interactive Commands w/ Consent"
+  },
+  {
+    "Name": "Whip",
+    "Description": "Type Whip in chat.",
+    "Access": "Interactive Commands w/ Consent"
   },
   {
     "Name": "!analyze",
-    "Description": "!analyze",
-    "Access": "Everyone"
+    "Description": "Type !analyze in chat.",
+    "Access": "Mod Commands"
   },
   {
-    "Name": "!boop",
-    "Description": "!boop",
-    "Access": "Everyone"
+    "Name": "END",
+    "Description": "Type END in chat.",
+    "Access": "Mod Commands"
   },
   {
-    "Name": "!boops",
-    "Description": "!boops",
-    "Access": "Everyone"
+    "Name": "Set Game Name",
+    "Description": "Type Set Game Name in chat.",
+    "Access": "Mod Commands"
   },
   {
-    "Name": "!CC",
-    "Description": "!CC",
-    "Access": "Everyone"
+    "Name": "Set Stream Title",
+    "Description": "Type Set Stream Title in chat.",
+    "Access": "Mod Commands"
   },
   {
-    "Name": "!clip",
-    "Description": "!clip",
-    "Access": "Everyone"
+    "Name": "Shoutout",
+    "Description": "Type Shoutout in chat.",
+    "Access": "Mod Commands"
   },
   {
-    "Name": "!command",
-    "Description": "!command",
-    "Access": "Everyone"
+    "Name": "Unmute",
+    "Description": "Type Unmute in chat.",
+    "Access": "Mod Commands"
   },
   {
-    "Name": "!commands",
-    "Description": "!commands",
-    "Access": "Everyone"
+    "Name": "WashYoHands",
+    "Description": "Type WashYoHands in chat.",
+    "Access": "Passive"
   },
   {
-    "Name": "!consent",
-    "Description": "!consent",
-    "Access": "Everyone"
+    "Name": "What game?",
+    "Description": "Type What game? in chat.",
+    "Access": "Passive"
   },
   {
-    "Name": "!cuddle",
-    "Description": "!cuddle",
-    "Access": "Everyone"
+    "Name": "Quote Add",
+    "Description": "Type Quote Add in chat.",
+    "Access": "Searchable Quotes"
   },
   {
-    "Name": "!cuddles",
-    "Description": "!cuddles",
-    "Access": "Everyone"
+    "Name": "Quote Delete",
+    "Description": "Type Quote Delete in chat.",
+    "Access": "Searchable Quotes"
   },
   {
-    "Name": "!discord",
-    "Description": "!discord",
-    "Access": "Everyone"
+    "Name": "Quote Display",
+    "Description": "Type Quote Display in chat.",
+    "Access": "Searchable Quotes"
   },
   {
-    "Name": "!first",
-    "Description": "!first",
-    "Access": "Everyone"
+    "Name": "Quote Numbering Mode",
+    "Description": "Type Quote Numbering Mode in chat.",
+    "Access": "Searchable Quotes"
   },
   {
-    "Name": "!followage",
-    "Description": "!followage",
-    "Access": "Everyone"
+    "Name": "Valentine's Card",
+    "Description": "Type Valentine's Card in chat.",
+    "Access": "Seasonal"
   },
   {
     "Name": "!gifters",
-    "Description": "!gifters",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!guess",
-    "Description": "!guess",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!headpat",
-    "Description": "!headpat",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!headpats",
-    "Description": "!headpats",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!howdy",
-    "Description": "!howdy",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!hug",
-    "Description": "!hug",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!hugs",
-    "Description": "!hugs",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!inv",
-    "Description": "!inv",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!inventory",
-    "Description": "!inventory",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!items",
-    "Description": "!items",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!lick",
-    "Description": "!lick",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!licks",
-    "Description": "!licks",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!lurk",
-    "Description": "!lurk",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!meme",
-    "Description": "!meme",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!memes",
-    "Description": "!memes",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!moan",
-    "Description": "!moan",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!moans",
-    "Description": "!moans",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!Multi",
-    "Description": "!Multi",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!MutliStream",
-    "Description": "!MutliStream",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!quote",
-    "Description": "!quote",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!remove item",
-    "Description": "!remove item",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!setgame",
-    "Description": "!setgame",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!settitle",
-    "Description": "!settitle",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!slap",
-    "Description": "!slap",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!so",
-    "Description": "!so",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!social",
-    "Description": "!social",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!socials",
-    "Description": "!socials",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!spank",
-    "Description": "!spank",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!spanks",
-    "Description": "!spanks",
-    "Access": "Everyone"
-  },
-  {
-    "Name": "!sub",
-    "Description": "!sub",
-    "Access": "Everyone"
+    "Description": "Type !gifters in chat.",
+    "Access": "Subathon"
   },
   {
     "Name": "!subgoal",
-    "Description": "!subgoal",
-    "Access": "Everyone"
+    "Description": "Type !subgoal in chat.",
+    "Access": "Subathon"
   },
   {
-    "Name": "!throw",
-    "Description": "!throw",
-    "Access": "Everyone"
+    "Name": "Add Item",
+    "Description": "Type Add Item in chat.",
+    "Access": "Twitch Commands"
   },
   {
-    "Name": "!tickle",
-    "Description": "!tickle",
-    "Access": "Everyone"
+    "Name": "Discord Link",
+    "Description": "Type Discord Link in chat.",
+    "Access": "Twitch Commands"
   },
   {
-    "Name": "!tickles",
-    "Description": "!tickles",
-    "Access": "Everyone"
+    "Name": "Get Items",
+    "Description": "Type Get Items in chat.",
+    "Access": "Twitch Commands"
   },
   {
-    "Name": "!tp",
-    "Description": "!tp",
-    "Access": "Everyone"
+    "Name": "Remove Item",
+    "Description": "Type Remove Item in chat.",
+    "Access": "Twitch Commands"
   },
   {
-    "Name": "!trivia",
-    "Description": "!trivia",
-    "Access": "Everyone"
+    "Name": "Socials",
+    "Description": "Type Socials in chat.",
+    "Access": "Twitch Commands"
+  },
+  {
+    "Name": "Sub Reminder",
+    "Description": "Type Sub Reminder in chat.",
+    "Access": "Twitch Commands"
+  },
+  {
+    "Name": "!Multi, !MutliStream",
+    "Description": "Type !Multi, !MutliStream in chat.",
+    "Access": "Viewer Commands"
   },
   {
     "Name": "!triviapoints",
-    "Description": "!triviapoints",
-    "Access": "Everyone"
+    "Description": "Type !triviapoints in chat.",
+    "Access": "Viewer Commands"
   },
   {
-    "Name": "!unlurk",
-    "Description": "!unlurk",
-    "Access": "Everyone"
+    "Name": "Clip to Chat/Discord",
+    "Description": "Type Clip to Chat/Discord in chat.",
+    "Access": "Viewer Commands"
   },
   {
-    "Name": "!unmute",
-    "Description": "!unmute",
-    "Access": "Everyone"
+    "Name": "Commands List",
+    "Description": "Type Commands List in chat.",
+    "Access": "Viewer Commands"
   },
   {
-    "Name": "!use",
-    "Description": "!use",
-    "Access": "Everyone"
+    "Name": "FollowAge",
+    "Description": "Type FollowAge in chat.",
+    "Access": "Viewer Commands"
   },
   {
-    "Name": "!whip",
-    "Description": "!whip",
-    "Access": "Everyone"
+    "Name": "Lurk",
+    "Description": "Type Lurk in chat.",
+    "Access": "Viewer Commands"
   },
   {
-    "Name": "!whips",
-    "Description": "!whips",
-    "Access": "Everyone"
+    "Name": "Quote",
+    "Description": "Type Quote in chat.",
+    "Access": "Viewer Commands"
   },
   {
-    "Name": "brb",
-    "Description": "brb",
-    "Access": "Everyone"
+    "Name": "Unlurk",
+    "Description": "Type Unlurk in chat.",
+    "Access": "Viewer Commands"
+  },
+  {
+    "Name": "!guess",
+    "Description": "Type !guess in chat.",
+    "Access": "YT Commands"
+  },
+  {
+    "Name": "First for stream",
+    "Description": "Type First for stream in chat.",
+    "Access": "YT Commands"
+  },
+  {
+    "Name": "Random Game Trivia",
+    "Description": "Type Random Game Trivia in chat.",
+    "Access": "YT Commands"
   }
 ]
