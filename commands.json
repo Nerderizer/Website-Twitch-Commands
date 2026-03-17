@@ -1,49 +1,49 @@
 [
   {
     "Trigger": "!boop, !boops",
-    "Description": "Boop",
+    "Description": "Boop another user. Usage: !boop <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!consent",
-    "Description": "Consent",
+    "Description": "Review Consent settings. Toggle your Consent for a given action. Usage: !consent, !consent <consent action>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!cuddle, !cuddles",
-    "Description": "Cuddle",
+    "Description": "Cuddle another user. Usage: !cuddle <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!headpat, !headpats",
-    "Description": "Headpat",
+    "Description": "Headpat another user. Usage: !headpat <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!hug, !hugs",
-    "Description": "Hug",
+    "Description": "Hug another user. Usage: !hug <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!lick, !licks",
-    "Description": "Lick",
+    "Description": "Lick another user. Usage: !lick <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!meme, !memes",
-    "Description": "Meme",
+    "Description": "Meme on another user. Usage: !meme <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!moan, !moans",
-    "Description": "Moan",
+    "Description": "Moan at another user. Usage: !moan <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
@@ -55,133 +55,115 @@
   },
   {
     "Trigger": "!spank, !spanks",
-    "Description": "Spank",
+    "Description": "Spank another user. Usage: !spank <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!tickle, !tickles",
-    "Description": "Tickle",
+    "Description": "Tickle another user. Usage: !tickle <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!whip, !whips",
-    "Description": "Whip",
+    "Description": "Whip another user. Usage: !whip <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!add item",
-    "Description": "Add Item",
+    "Description": "Add Item an item to a user's inventory. Usage: !add item <item name>",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!analyze ",
-    "Description": "!analyze",
+    "Description": "Use AI to analyze the current gameplay by capturing screenshots. This is a cool one.",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!end",
-    "Description": "END",
+    "Description": "Use at the end of stream to post socials and Copy/pasta for raid message.",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!quote",
-    "Description": "Quote Display",
+    "Description": "Show off a random or selected quote. Add a quote number to pick one. Usage: !quote, !quote <quote number>",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!quoteAdd, !addQuote",
-    "Description": "Quote Add",
+    "Description": "Add a quote to the Quote List. Usage: !addQuote Quote Text - <username>",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!quoteDel, !delQuote",
-    "Description": "Quote Delete",
+    "Description": "Delete a quote from the Quote List. Usage: !delQuote <quote number>",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!quoteMode",
-    "Description": "Quote Numbering Mode",
+    "Description": "Change Quote Numbering Mode",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!remove item",
-    "Description": "Remove Item",
+    "Description": "Remove Item from a user's inventory. Usage: !remove item <item name>",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!setgame",
-    "Description": "Set Game Name",
+    "Description": "Set Game Name. Usage: !setgame <Twitch Category>",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!settitle",
-    "Description": "Set Stream Title",
+    "Description": "Set Stream Title. Usage: !settitle <stream title>",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!so",
-    "Description": "Give a Shoutout to a Streamer!",
+    "Description": "Give a Shoutout to a Streamer! Usage: !so <username>",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!unmute",
-    "Description": "Unmute",
+    "Description": "Unmute User, cause he forgot to unmute.",
     "Group": "Mod Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "brb",
-    "Description": "WashYoHands",
+    "Description": "The bot will remind you to wash your hands.",
     "Group": "Passive",
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "what game",
-    "Description": "What game?",
+    "Trigger": "what game, this game?, game is this",
+    "Description": "Automatically provides game details.",
     "Group": "Passive",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!vcard",
-    "Description": "Valentine's Card",
-    "Group": "Seasonal",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!gifters",
-    "Description": "!gifters",
-    "Group": "Subathon",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!subgoal",
-    "Description": "!subgoal",
-    "Group": "Subathon",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!clip",
-    "Description": "Clip to Chat/Discord",
+    "Description": "Auto clip the last 30 seconds. Does not create a Clip Title.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!command, !commands",
-    "Description": "Commands List",
+    "Description": "View the Commands List",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
@@ -217,7 +199,7 @@
   },
   {
     "Trigger": "!Multi, !MutliStream",
-    "Description": "!Multi, !MutliStream",
+    "Description": "Show the multistream link for me and my friends.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
@@ -241,7 +223,7 @@
   },
   {
     "Trigger": "!triviapoints",
-    "Description": "!triviapoints",
+    "Description": "Check your total Trivia Points!",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
