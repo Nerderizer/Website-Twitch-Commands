@@ -90,12 +90,6 @@
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!quote",
-    "Description": "Show off a random or selected quote. Add a quote number to pick one. Usage: !quote, !quote <quote number>",
-    "Group": "Mod Commands",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!quoteAdd, !addQuote",
     "Description": "Add a quote to the Quote List. Usage: !addQuote Quote Text - <username>",
     "Group": "Mod Commands",
@@ -163,19 +157,19 @@
   },
   {
     "Trigger": "!command, !commands",
-    "Description": "View the Commands List",
+    "Description": "Post the link to my Commands List.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!discord",
-    "Description": "Discord Link",
+    "Description": "Post the link to my Discord server.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!followage",
-    "Description": "FollowAge",
+    "Description": "Share your current Follow age on twitch",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
@@ -187,13 +181,13 @@
   },
   {
     "Trigger": "!items, !inv, !inventory",
-    "Description": "Get Items",
+    "Description": "Show your Inventory Items.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!lurk",
-    "Description": "Lurk",
+    "Description": "Show support by dropping a lurk!",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
@@ -205,19 +199,19 @@
   },
   {
     "Trigger": "!quote",
-    "Description": "Quote",
+    "Description": "Show off a random or selected quote. Add a quote number to pick one. Usage: !quote, !quote <quote number>",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!socials, !social",
-    "Description": "Socials",
+    "Description": "Post the links to my socials.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!sub",
-    "Description": "Sub Reminder",
+    "Description": "Post a reminder that subscriptions help produce more cool content to enjoy!",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
@@ -229,7 +223,7 @@
   },
   {
     "Trigger": "!unlurk",
-    "Description": "Unlurk",
+    "Description": "Comeback to chat and post an unlurk.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   }
