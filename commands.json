@@ -102,12 +102,6 @@
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!quoteMode",
-    "Description": "Change Quote Numbering Mode",
-    "Group": "Mod Commands",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!remove item",
     "Description": "Remove Item from a user's inventory. Usage: !remove item <item name>",
     "Group": "Mod Commands",
