@@ -75,61 +75,61 @@
     "Trigger": "!add item",
     "Description": "Add Item an item to a user's inventory. Usage: !add item <item name>",
     "Group": "Mod Commands",
-    "Permissions": "Everyone"
+    "Permissions": "Moderator"
   },
   {
     "Trigger": "!analyze ",
     "Description": "Use AI to analyze the current gameplay by capturing screenshots. This is a cool one.",
     "Group": "Mod Commands",
-    "Permissions": "Everyone"
+    "Permissions": "Moderator"
   },
   {
     "Trigger": "!end",
     "Description": "Use at the end of stream to post socials and Copy/pasta for raid message.",
     "Group": "Mod Commands",
-    "Permissions": "Everyone"
+    "Permissions": "Moderator"
   },
   {
     "Trigger": "!quoteAdd, !addQuote",
     "Description": "Add a quote to the Quote List. Usage: !addQuote Quote Text - <username>",
     "Group": "Mod Commands",
-    "Permissions": "Everyone"
+    "Permissions": "Moderator"
   },
   {
     "Trigger": "!quoteDel, !delQuote",
     "Description": "Delete a quote from the Quote List. Usage: !delQuote <quote number>",
     "Group": "Mod Commands",
-    "Permissions": "Everyone"
+    "Permissions": "Moderator"
   },
   {
     "Trigger": "!remove item",
     "Description": "Remove Item from a user's inventory. Usage: !remove item <item name>",
     "Group": "Mod Commands",
-    "Permissions": "Everyone"
+    "Permissions": "Moderator"
   },
   {
     "Trigger": "!setgame",
     "Description": "Set Game Name. Usage: !setgame <Twitch Category>",
     "Group": "Mod Commands",
-    "Permissions": "Everyone"
+    "Permissions": "Moderator"
   },
   {
     "Trigger": "!settitle",
     "Description": "Set Stream Title. Usage: !settitle <stream title>",
     "Group": "Mod Commands",
-    "Permissions": "Everyone"
+    "Permissions": "Moderator"
   },
   {
     "Trigger": "!so",
     "Description": "Give a Shoutout to a Streamer! Usage: !so <username>",
     "Group": "Mod Commands",
-    "Permissions": "Everyone"
+    "Permissions": "Moderator"
   },
   {
     "Trigger": "!unmute",
     "Description": "Unmute User, cause he forgot to unmute.",
     "Group": "Mod Commands",
-    "Permissions": "Everyone"
+    "Permissions": "Moderator"
   },
   {
     "Trigger": "brb",
