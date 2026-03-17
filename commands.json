@@ -49,7 +49,7 @@
   },
   {
     "Trigger": "!slap",
-    "Description": "Slap",
+    "Description": "Slap another user. Usage: !slap <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
