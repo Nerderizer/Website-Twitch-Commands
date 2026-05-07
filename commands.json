@@ -144,6 +144,54 @@
     "Permissions": "Everyone"
   },
   {
+    "Trigger": "!color",
+    "Description": "Change your avatars outfit color to the corresponding color number. Add the number corresponding to the color in the on-screen legend. Usage: !color <color number>",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!hair",
+    "Description": "Change your avatars hair style to the corresponding style number. Add the number corresponding to the style in the on-screen legend. Usage: !hair <style number>",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!hcolor",
+    "Description": "Change your avatars hair color to the corresponding color number. Add the number corresponding to the color in the on-screen legend. Usage: !hcolor <color number>",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!heart",
+    "Description": "Make your avatar spew hearts on-screen.",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!hey",
+    "Description": "Move your avatar to the target user's avatar on-screen. Add the user's name after the command. Usage: !hey <target name>",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!jump",
+    "Description": "Make your avatar jump up and down on-screen.",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!twerk, !dance",
+    "Description": "Your on-screen avatar will twerk and drop some peaches",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!walk",
+    "Description": "Move your avatar the number of pixels defined,  on-screen. Add the distance in number of pixels after the command. Usage: !walk <distance>",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
     "Trigger": "!clip",
     "Description": "Auto clip the last 30 seconds. Does not create a Clip Title.",
     "Group": "Viewer Commands",
