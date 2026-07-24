@@ -193,73 +193,73 @@
   },
   {
     "Trigger": "!pause",
-    "Description": "Temporarily pauses the currently playing song. Usage: !pause",
+    "Description": "!pause",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!play",
-    "Description": "Plays a song from a search term or URL, or resumes paused playback. Usage: !play <song name or URL>",
+    "Description": "!play",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!queue",
-    "Description": "Displays the current music queue and upcoming songs. Usage: !queue",
+    "Description": "!queue",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!skip, !skipsong",
-    "Description": "Skips the currently playing song and moves to the next track. Usage: !skip",
+    "Description": "!skip",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!song, !songname",
-    "Description": "Displays information about the currently playing song. Usage: !song, !songname",
+    "Description": "!song",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!sr",
-    "Description": "Requests a song to be added to the music queue. Usage: !sr <song name or YT Music URL>",
+    "Description": "!sr",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!srForce, !srforce",
-    "Description": "Force-adds a song request to the queue, bypassing normal request restrictions. Usage: !srForce <song name or YT Music URL>",
+    "Description": "!srForce",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!stop",
-    "Description": "Stops music playback and ends the current music session. Usage: !stop",
+    "Description": "!stop",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!volume, !vol",
-    "Description": "Adjusts the music player's volume level. Usage: !volume <0-100>",
+    "Description": "!volume",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!voteskip, !skipvote",
-    "Description": "Casts a vote to skip the currently playing song. Usage: !voteskip",
+    "Description": "!voteskip",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!when",
-    "Description": "Shows your song's position in the queue and estimated play time. Usage: !when",
+    "Description": "!when",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!wrongsong, !songwrong",
-    "Description": "Reports that the currently playing song does not match the intended request. Usage: !wrongsong",
+    "Description": "!wrongsong",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
