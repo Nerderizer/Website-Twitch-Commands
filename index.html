@@ -1,141 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UserID10T's Arcade Commands</title>
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Nerderizer/Website-Twitch-Commands/refs/heads/main/favicon.ico">
-    <style>
-        body {
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            background-color: #0e0e10;
-            color: #efeff1;
-            margin: 0;
-            padding: 10px;
-            line-height: 1.2;
-        }
-        .container { max-width: 850px; margin: 0 auto; }
-        
-        .header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 10px 5px; 
-            border-bottom: 1px solid #303032; 
-            margin-bottom: 15px; 
-        }
-        h1 { color: #9147ff; margin: 0; font-size: 1.4rem; letter-spacing: -0.5px; }
-        .sub-text { color: #adadb8; font-size: 0.85rem; margin-top: 2px; }
-
-        .search-box { 
-            width: 100%; 
-            padding: 8px 12px; 
-            margin-bottom: 15px; 
-            background: #1f1f23; 
-            border: 1px solid #303032; 
-            color: white; 
-            border-radius: 4px; 
-            font-size: 14px; 
-            box-sizing: border-box; 
-        }
-        .search-box:focus { border-color: #9147ff; outline: none; }
-
-        table { width: 100%; border-collapse: collapse; background: #18181b; }
-        th { background-color: #9147ff; color: white; text-align: left; padding: 8px; font-size: 12px; text-transform: uppercase; }
-        td { padding: 8px; border-bottom: 1px solid #303032; font-size: 14px; vertical-align: middle; }
-        
-        .group-row { background: #26262c; color: #adadb8; font-weight: bold; padding: 6px 8px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
-        .trigger-cell { color: #bf94ff; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-weight: bold; }
-        .perm-badge { font-size: 10px; background: #3a3a3d; padding: 1px 5px; border-radius: 3px; color: #adadb8; white-space: nowrap; }
-        
-        tr:hover { background-color: #1f1f23; }
-        
-        @media (max-width: 500px) {
-            .hide-mobile { display: none; }
-            h1 { font-size: 1.1rem; }
-        }
-    </style>
-</head>
-<body>
-
 <div class="container">
+
     <div class="header">
-        <div>
-            <h1>UserID10T's Arcade Commands</h1>
-            <div class="sub-text">Interactive Bot Commands List</div>
+        <h1>🎮 Stream Commands</h1>
+
+        <p>
+            Available chat commands for the UserID10T Twitch channel.
+        </p>
+
+        <div class="last-updated">
+            Last updated:
+            <span id="lastUpdated">Loading...</span>
         </div>
     </div>
 
-    <input type="text" id="searchBar" class="search-box" placeholder="Filter commands..." onkeyup="filterTable()">
+    <div class="search-wrapper">
+        <input
+            id="searchBar"
+            class="search-box"
+            type="text"
+            placeholder="🔍 Search commands..."
+            onkeyup="filterTable()">
+    </div>
 
-    <table id="commandTable">
-        <thead>
-            <tr>
-                <th width="35%">Command</th>
-                <th width="50%">Description</th>
-                <th width="15%" class="hide-mobile">Access</th>
-            </tr>
-        </thead>
-        <tbody id="tableBody">
-            <tr><td colspan="3" style="text-align:center; padding:20px;">Loading commands...</td></tr>
-        </tbody>
-    </table>
+    <div class="stats">
+
+        <div class="stat">
+            <div id="totalCommands" class="stat-number">0</div>
+            <div class="stat-label">Commands</div>
+        </div>
+
+        <div class="stat">
+            <div id="totalGroups" class="stat-number">0</div>
+            <div class="stat-label">Categories</div>
+        </div>
+
+        <div class="stat">
+            <div id="publicCommands" class="stat-number">0</div>
+            <div class="stat-label">Public</div>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <table id="commandTable">
+
+            <thead>
+
+                <tr>
+
+                    <th width="30%">Command</th>
+
+                    <th width="55%">Description</th>
+
+                    <th width="15%" class="hide-mobile">
+                        Access
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tableBody">
+
+                <tr>
+
+                    <td colspan="3"
+                        style="padding:50px;text-align:center;">
+
+                        Loading commands...
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="footer">
+
+        Commands automatically generated from Streamer.bot.
+
+    </div>
+
 </div>
-
-<script>
-    let commandData = [];
-
-    async function fetchCommands() {
-        try {
-            // Cache buster ensures updates show immediately after a GitHub push
-            const response = await fetch('commands.json?v=' + new Date().getTime());
-            commandData = await response.json();
-            renderTable(commandData);
-        } catch (error) {
-            document.getElementById('tableBody').innerHTML = '<tr><td colspan="3">Error loading commands.json</td></tr>';
-        }
-    }
-
-    function renderTable(data) {
-        const tbody = document.getElementById('tableBody');
-        tbody.innerHTML = '';
-
-        const grouped = data.reduce((acc, obj) => {
-            const key = obj.Group || 'General';
-            if (!acc[key]) acc[key] = [];
-            acc[key].push(obj);
-            return acc;
-        }, {});
-
-        for (const group in grouped) {
-            const headerRow = document.createElement('tr');
-            headerRow.innerHTML = `<td colspan="3" class="group-row">${group}</td>`;
-            tbody.appendChild(headerRow);
-
-            grouped[group].forEach(cmd => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td class="trigger-cell">${cmd.Trigger}</td>
-                    <td>${cmd.Description}</td>
-                    <td class="hide-mobile"><span class="perm-badge">${cmd.Permissions}</span></td>
-                `;
-                tbody.appendChild(row);
-            });
-        }
-    }
-
-    function filterTable() {
-        const input = document.getElementById('searchBar').value.toLowerCase();
-        const filtered = commandData.filter(cmd => 
-            cmd.Trigger.toLowerCase().includes(input) || 
-            cmd.Description.toLowerCase().includes(input) ||
-            cmd.Group.toLowerCase().includes(input)
-        );
-        renderTable(filtered);
-    }
-
-    fetchCommands();
-</script>
-
-</body>
-</html>
