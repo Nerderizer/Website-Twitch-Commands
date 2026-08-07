@@ -75,101 +75,102 @@ Copied!
 
 <script>
 
-let allCommands=[];
+let allCommands = [];
+let currentGroup = "All";
 
-let currentGroup="All";
-
-
+const GROUP_ICONS = {
+    "All":"🏠",
+    "Community":"💬",
+    "General":"💬",
+    "Games":"🎮",
+    "Game":"🎮",
+    "Stream":"📺",
+    "Music":"🎵",
+    "Moderator":"👑",
+    "Moderation":"👑",
+    "Utility":"🛠",
+    "Utilities":"🛠",
+    "Admin":"⚙️",
+    "Developer":"💻"
+};
 
 function normalize(value){
-
-    return (value||"").toLowerCase();
-
+    return (value || "").toLowerCase();
 }
 
-
+function escapeHtml(text){
+    return String(text ?? "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#39;");
+}
 
 function permissionClass(permission){
 
-    permission=normalize(permission);
+    permission = normalize(permission);
 
-    if(permission.includes("broadcaster")) return "broadcaster";
+    if(permission.includes("broadcaster"))
+        return "broadcaster";
 
-    if(permission.includes("mod")) return "mod";
+    if(permission.includes("mod"))
+        return "mod";
 
-    if(permission.includes("vip")) return "vip";
+    if(permission.includes("vip"))
+        return "vip";
 
     return "everyone";
-
 }
 
+function permissionLabel(permission){
 
+    if(!permission)
+        return "Everyone";
 
-function escapeHtml(text){
-
-    return String(text)
-
-    .replaceAll("&","&amp;")
-
-    .replaceAll("<","&lt;")
-
-    .replaceAll(">","&gt;")
-
-    .replaceAll('"',"&quot;")
-
-    .replaceAll("'","&#39;");
-
+    return permission;
 }
 
+function getGroups(){
 
+    return [...new Set(
+
+        allCommands.map(c => c.Group || "General")
+
+    )].sort();
+
+}
 
 function createTabs(){
 
-    const tabBar=document.getElementById("tabBar");
+    const tabBar = document.getElementById("tabBar");
 
+    tabBar.innerHTML = "";
 
-
-    const groups=[
-
-        "All",
-
-        ...new Set(
-
-            allCommands
-
-            .map(c=>c.Group||"Ungrouped")
-
-            .sort()
-
-        )
-
-    ];
-
-
-
-    tabBar.innerHTML="";
-
-
+    const groups = ["All", ...getGroups()];
 
     groups.forEach(group=>{
 
+        const count = group==="All"
+
+            ? allCommands.length
+
+            : allCommands.filter(c=>(c.Group||"General")===group).length;
+
         const button=document.createElement("button");
-
-
 
         button.className="tab";
 
-
-
         if(group===currentGroup)
-
             button.classList.add("active");
 
+        const icon = GROUP_ICONS[group] ?? "📁";
 
-
-        button.textContent=group;
-
-
+        button.innerHTML=`
+            ${icon}
+            <span>${group}</span>
+            <span class="tab-count">${count}</span>
+        `;
 
         button.onclick=()=>{
 
@@ -177,11 +178,9 @@ function createTabs(){
 
             createTabs();
 
-            filterCommands();
+            render();
 
         };
-
-
 
         tabBar.appendChild(button);
 
@@ -189,13 +188,49 @@ function createTabs(){
 
 }
 
+function filteredCommands(){
 
+    const search = normalize(
+        document.getElementById("searchBar").value
+    );
 
-function render(commands){
+    return allCommands.filter(cmd=>{
+
+        if(currentGroup!=="All"){
+
+            if((cmd.Group||"General")!==currentGroup)
+                return false;
+
+        }
+
+        if(search==="")
+            return true;
+
+        return [
+
+            cmd.Trigger,
+
+            cmd.Description,
+
+            cmd.Group,
+
+            cmd.Permissions
+
+        ].join(" ")
+
+        .toLowerCase()
+
+        .includes(search);
+
+    });
+
+}
+
+function render(){
 
     const container=document.getElementById("commandContainer");
 
-
+    const commands=filteredCommands();
 
     if(commands.length===0){
 
@@ -203,7 +238,9 @@ function render(commands){
 
             <div class="empty">
 
-                No commands found.
+                <h2>No commands found</h2>
+
+                <p>Try another search.</p>
 
             </div>
 
@@ -213,11 +250,10 @@ function render(commands){
 
     }
 
-
-
     container.innerHTML=commands.map(cmd=>`
 
-<div class="command-card">
+<div class="command-card"
+     onclick="copyCommand('${escapeHtml(cmd.Trigger)}')">
 
     <div class="command-top">
 
@@ -229,17 +265,33 @@ function render(commands){
 
         <span class="badge ${permissionClass(cmd.Permissions)}">
 
-            ${escapeHtml(cmd.Permissions)}
+            ${permissionLabel(cmd.Permissions)}
 
         </span>
 
     </div>
 
-
-
     <div class="description">
 
         ${escapeHtml(cmd.Description)}
+
+    </div>
+
+    <div class="card-footer">
+
+        <span>
+
+            ${GROUP_ICONS[cmd.Group] ?? "📁"}
+
+            ${escapeHtml(cmd.Group)}
+
+        </span>
+
+        <span>
+
+            📋 Click to copy
+
+        </span>
 
     </div>
 
@@ -249,105 +301,83 @@ function render(commands){
 
 }
 
-
-
 function filterCommands(){
 
-    const query=normalize(
-
-        document.getElementById("searchBar").value
-
-    );
-
-
-
-    let list=[...allCommands];
-
-
-
-    if(currentGroup!=="All"){
-
-        list=list.filter(
-
-            c=>(c.Group||"Ungrouped")===currentGroup
-
-        );
-
-    }
-
-
-
-    if(query){
-
-        list=list.filter(c=>{
-
-            return [
-
-                c.Trigger,
-
-                c.Description,
-
-                c.Group,
-
-                c.Permissions
-
-            ]
-
-            .join(" ")
-
-            .toLowerCase()
-
-            .includes(query);
-
-        });
-
-    }
-
-
-
-    render(list);
+    render();
 
 }
 
+async function copyCommand(command){
 
+    try{
+
+        await navigator.clipboard.writeText(command);
+
+        const toast=document.getElementById("toast");
+
+        toast.textContent=`Copied ${command}`;
+
+        toast.classList.add("show");
+
+        setTimeout(()=>{
+
+            toast.classList.remove("show");
+
+        },1800);
+
+    }
+    catch{
+
+        alert(command);
+
+    }
+
+}
 
 async function loadCommands(){
 
-    const response=await fetch(
+    try{
 
-        "commands.json",
+        const response=await fetch(
 
-        {
+            "commands.json",
 
-            cache:"no-store"
+            {
 
-        }
+                cache:"no-store"
 
-    );
+            }
 
+        );
 
+        allCommands=await response.json();
 
-    allCommands=await response.json();
+        document.getElementById("lastUpdated").textContent=
 
+            new Date().toLocaleString();
 
+        createTabs();
 
-    createTabs();
+        render();
 
-    render(allCommands);
+    }
+    catch(e){
 
+        document.getElementById("commandContainer").innerHTML=`
 
+        <div class="empty">
 
-    document.getElementById(
+            Failed to load commands.
 
-        "lastUpdated"
+        </div>
 
-    ).textContent=
+        `;
 
-        new Date().toLocaleString();
+        console.error(e);
+
+    }
 
 }
-
-
 
 document.addEventListener(
 
