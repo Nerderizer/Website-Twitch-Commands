@@ -1,58 +1,391 @@
-body {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+/* ===========================================
+   UserID10T Commands Dashboard
+   =========================================== */
+
+:root{
+    --bg:#0e0e10;
+    --card:#18181b;
+    --card-hover:#202024;
+    --border:#303032;
+
+    --accent:#9147ff;
+    --accent-hover:#a970ff;
+
+    --text:#efeff1;
+    --text-muted:#adadb8;
+
+    --everyone:#00d084;
+    --vip:#9147ff;
+    --mod:#1d9bf0;
+    --broadcaster:#ff5c5c;
+
+    --shadow:0 12px 30px rgba(0,0,0,.35);
 }
 
-.container {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1rem;
+*{
+    box-sizing:border-box;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 2rem;
+body{
+    margin:0;
+    padding:40px;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Inter,Segoe UI,Roboto,sans-serif;
 }
 
-h2 {
-  margin-top: 2rem;
-  border-bottom: 2px solid #444;
-  padding-bottom: 0.5rem;
+.container{
+    max-width:1400px;
+    margin:auto;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 0.5rem;
+/* ===========================================
+   Header
+   =========================================== */
+
+.header{
+    text-align:center;
+    margin-bottom:30px;
 }
 
-th, td {
-  border: 1px solid #444;
-  padding: 8px;
-  text-align: left;
+.header h1{
+    margin:0;
+    font-size:2.5rem;
+    font-weight:800;
+    color:var(--accent);
 }
 
-th {
-  background-color: #333;
+.header p{
+    margin-top:8px;
+    color:var(--text-muted);
+    font-size:1rem;
 }
 
-tr:nth-child(even) {
-  background-color: #2a2a2a;
+.last-updated{
+    margin-top:14px;
+    font-size:.85rem;
+    color:#888;
 }
 
-tr:nth-child(odd) {
-  background-color: #1e1e1e;
+/* ===========================================
+   Search
+   =========================================== */
+
+.search-wrapper{
+    position:sticky;
+    top:15px;
+    z-index:50;
+    margin-bottom:25px;
 }
 
-tr:hover {
-  background-color: #444;
+.search-box{
+    width:100%;
+    padding:16px 20px;
+
+    background:#1f1f23;
+    color:white;
+
+    border:1px solid var(--border);
+    border-radius:14px;
+
+    font-size:16px;
+
+    transition:.2s;
 }
 
-.error {
-  color: #ff5555;
-  margin-top: 1rem;
-  text-align: center;
+.search-box:focus{
+
+    outline:none;
+
+    border-color:var(--accent);
+
+    box-shadow:
+        0 0 0 4px rgba(145,71,255,.2);
+}
+
+/* ===========================================
+   Dashboard Stats
+   =========================================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+.stat{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+}
+
+.stat-number{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--accent);
+
+}
+
+.stat-label{
+
+    color:var(--text-muted);
+
+    margin-top:6px;
+
+}
+
+/* ===========================================
+   Card
+   =========================================== */
+
+.card{
+
+    background:var(--card);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===========================================
+   Table
+   =========================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead th{
+
+    position:sticky;
+
+    top:85px;
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:16px;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    text-align:left;
+
+    z-index:5;
+
+}
+
+td{
+
+    padding:16px;
+
+    border-bottom:1px solid var(--border);
+
+    vertical-align:middle;
+
+    font-size:15px;
+
+}
+
+tbody tr{
+
+    transition:.15s;
+
+}
+
+tbody tr:hover{
+
+    background:var(--card-hover);
+
+    transform:translateX(4px);
+
+}
+
+/* ===========================================
+   Group Rows
+   =========================================== */
+
+.group-row td{
+
+    background:#232329;
+
+    color:var(--text-muted);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:.15em;
+
+    padding:14px 18px;
+
+}
+
+/* ===========================================
+   Command Pill
+   =========================================== */
+
+.command{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    background:#26262c;
+
+    border:1px solid #3d3d44;
+
+    border-radius:9px;
+
+    color:#bf94ff;
+
+    font-weight:700;
+
+    font-family:
+        "JetBrains Mono",
+        Consolas,
+        monospace;
+
+    font-size:15px;
+
+}
+
+/* ===========================================
+   Permission Badges
+   =========================================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:6px 10px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+
+.everyone{
+
+    background:rgba(0,208,132,.18);
+
+    color:var(--everyone);
+
+}
+
+.vip{
+
+    background:rgba(145,71,255,.18);
+
+    color:#c8a6ff;
+
+}
+
+.mod{
+
+    background:rgba(29,155,240,.18);
+
+    color:#7cc8ff;
+
+}
+
+.broadcaster{
+
+    background:rgba(255,92,92,.18);
+
+    color:#ff9d9d;
+
+}
+
+/* ===========================================
+   Footer
+   =========================================== */
+
+.footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:.85rem;
+
+}
+
+/* ===========================================
+   Mobile
+   =========================================== */
+
+@media(max-width:900px){
+
+.stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.hide-mobile{
+
+    display:none;
+
+}
+
+thead th{
+
+    top:75px;
+
+}
+
+body{
+
+    padding:20px;
+
+}
+
+.header h1{
+
+    font-size:2rem;
+
+}
+
 }
