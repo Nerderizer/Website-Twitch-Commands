@@ -1,394 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>UserID10T Commands</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UserID10T Commands</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-<div class="page">
-
-    <header class="hero">
-
-        <h1>🎮 UserID10T</h1>
-
-        <p class="subtitle">
-            Twitch Chat Commands
-        </p>
-
-        <div class="updated">
-            Updated
-            <span id="lastUpdated">Loading...</span>
-        </div>
-
-    </header>
-
-
-    <section class="search-area">
-
-        <input
-            id="searchBar"
-            type="text"
-            placeholder="🔍 Search commands..."
-            oninput="filterCommands()">
-
-    </section>
-
-
-    <section id="tabBar" class="tabs">
-
-        <!-- Generated automatically -->
-
-    </section>
-
-
-    <main id="commandContainer">
-
-        <div class="loading">
-
-            Loading commands...
-
-        </div>
-
-    </main>
-
-
-</div>
-
-
-
-<div id="toast" class="toast">
-
-Copied!
-
-</div>
-
-
-
-<script>
-
-let allCommands = [];
-let currentGroup = "All";
-
-const GROUP_ICONS = {
-    "All":"🏠",
-    "Community":"💬",
-    "General":"💬",
-    "Games":"🎮",
-    "Game":"🎮",
-    "Stream":"📺",
-    "Music":"🎵",
-    "Moderator":"👑",
-    "Moderation":"👑",
-    "Utility":"🛠",
-    "Utilities":"🛠",
-    "Admin":"⚙️",
-    "Developer":"💻"
-};
-
-function normalize(value){
-    return (value || "").toLowerCase();
-}
-
-function escapeHtml(text){
-    return String(text ?? "")
-        .replaceAll("&","&amp;")
-        .replaceAll("<","&lt;")
-        .replaceAll(">","&gt;")
-        .replaceAll('"',"&quot;")
-        .replaceAll("'","&#39;");
-}
-
-function permissionClass(permission){
-
-    permission = normalize(permission);
-
-    if(permission.includes("broadcaster"))
-        return "broadcaster";
-
-    if(permission.includes("mod"))
-        return "mod";
-
-    if(permission.includes("vip"))
-        return "vip";
-
-    return "everyone";
-}
-
-function permissionLabel(permission){
-
-    if(!permission)
-        return "Everyone";
-
-    return permission;
-}
-
-function getGroups(){
-
-    return [...new Set(
-
-        allCommands.map(c => c.Group || "General")
-
-    )].sort();
-
-}
-
-function createTabs(){
-
-    const tabBar = document.getElementById("tabBar");
-
-    tabBar.innerHTML = "";
-
-    const groups = ["All", ...getGroups()];
-
-    groups.forEach(group=>{
-
-        const count = group==="All"
-
-            ? allCommands.length
-
-            : allCommands.filter(c=>(c.Group||"General")===group).length;
-
-        const button=document.createElement("button");
-
-        button.className="tab";
-
-        if(group===currentGroup)
-            button.classList.add("active");
-
-        const icon = GROUP_ICONS[group] ?? "📁";
-
-        button.innerHTML=`
-            ${icon}
-            <span>${group}</span>
-            <span class="tab-count">${count}</span>
-        `;
-
-        button.onclick=()=>{
-
-            currentGroup=group;
-
-            createTabs();
-
-            render();
-
-        };
-
-        tabBar.appendChild(button);
-
-    });
-
-}
-
-function filteredCommands(){
-
-    const search = normalize(
-        document.getElementById("searchBar").value
-    );
-
-    return allCommands.filter(cmd=>{
-
-        if(currentGroup!=="All"){
-
-            if((cmd.Group||"General")!==currentGroup)
-                return false;
-
-        }
-
-        if(search==="")
-            return true;
-
-        return [
-
-            cmd.Trigger,
-
-            cmd.Description,
-
-            cmd.Group,
-
-            cmd.Permissions
-
-        ].join(" ")
-
-        .toLowerCase()
-
-        .includes(search);
-
-    });
-
-}
-
-function render(){
-
-    const container=document.getElementById("commandContainer");
-
-    const commands=filteredCommands();
-
-    if(commands.length===0){
-
-        container.innerHTML=`
-
-            <div class="empty">
-
-                <h2>No commands found</h2>
-
-                <p>Try another search.</p>
-
+    <div class="page">
+        <header class="hero">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+
+            <div class="hero-content">
+                <div class="hero-avatar-wrap">
+                    <img class="hero-avatar" src="favicon.ico" alt="UserID10T icon" />
+                </div>
+
+                <div class="hero-text">
+                    <div class="hero-kicker">Twitch Channel Companion</div>
+                    <h1>UserID10T</h1>
+                    <p class="subtitle">
+                        Gaming • Community • Chaos • Tech
+                    </p>
+                    <p class="hero-copy">
+                        Browse the live command list for the channel, search fast, and jump between categories.
+                    </p>
+
+                    <div class="hero-badges">
+                        <span class="hero-badge">🎮 Live Commands</span>
+                        <span class="hero-badge">💬 Community Ready</span>
+                        <span class="hero-badge">⚡ Fast Search</span>
+                    </div>
+                </div>
+
+                <div class="hero-emotes" aria-hidden="true">
+                    <span>😆</span>
+                    <span>🔥</span>
+                    <span>🎮</span>
+                    <span>😈</span>
+                    <span>💜</span>
+                    <span>😂</span>
+                </div>
             </div>
 
-        `;
+            <div class="updated">
+                Updated <span id="lastUpdated">Loading...</span>
+            </div>
+        </header>
 
-        return;
+        <section class="search-area">
+            <input
+                id="searchBar"
+                type="text"
+                placeholder="🔍 Search commands..."
+                oninput="filterCommands()">
+        </section>
 
-    }
+        <section id="tabBar" class="tabs"></section>
 
-    container.innerHTML=commands.map(cmd=>`
-
-<div class="command-card"
-     onclick="copyCommand('${escapeHtml(cmd.Trigger)}')">
-
-    <div class="command-top">
-
-        <span class="command-pill">
-
-            ${escapeHtml(cmd.Trigger)}
-
-        </span>
-
-        <span class="badge ${permissionClass(cmd.Permissions)}">
-
-            ${permissionLabel(cmd.Permissions)}
-
-        </span>
-
+        <main id="commandContainer">
+            <div class="loading">Loading commands...</div>
+        </main>
     </div>
 
-    <div class="description">
+    <div id="toast" class="toast">Copied!</div>
 
-        ${escapeHtml(cmd.Description)}
+    <script>
+        let allCommands = [];
+        let currentGroup = "All";
 
-    </div>
+        const GROUP_ICONS = {
+            "All": "🏠",
+            "Community": "💬",
+            "General": "💬",
+            "Games": "🎮",
+            "Game": "🎮",
+            "Stream": "📺",
+            "Music": "🎵",
+            "Moderator": "👑",
+            "Moderation": "👑",
+            "Utility": "🛠",
+            "Utilities": "🛠",
+            "Admin": "⚙️",
+            "Developer": "💻"
+        };
 
-    <div class="card-footer">
+        function normalize(value) {
+            return (value || "").toLowerCase();
+        }
 
-        <span>
+        function escapeHtml(text) {
+            return String(text ?? "")
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#39;");
+        }
 
-            ${GROUP_ICONS[cmd.Group] ?? "📁"}
+        function permissionClass(permission) {
+            permission = normalize(permission);
 
-            ${escapeHtml(cmd.Group)}
+            if (permission.includes("broadcaster")) return "broadcaster";
+            if (permission.includes("mod")) return "mod";
+            if (permission.includes("vip")) return "vip";
+            return "everyone";
+        }
 
-        </span>
+        function permissionLabel(permission) {
+            if (!permission) return "Everyone";
+            return permission;
+        }
 
-        <span>
+        function getGroups() {
+            return [...new Set(
+                allCommands.map(c => c.Group || "General")
+            )].sort();
+        }
 
-            📋 Click to copy
+        function createTabs() {
+            const tabBar = document.getElementById("tabBar");
+            tabBar.innerHTML = "";
 
-        </span>
+            const groups = ["All", ...getGroups()];
 
-    </div>
+            groups.forEach(group => {
+                const count = group === "All"
+                    ? allCommands.length
+                    : allCommands.filter(c => (c.Group || "General") === group).length;
 
-</div>
+                const button = document.createElement("button");
+                button.className = "tab";
+                if (group === currentGroup) button.classList.add("active");
 
-`).join("");
+                const icon = GROUP_ICONS[group] ?? "📁";
 
-}
+                button.innerHTML = `
+                    <span class="tab-label">${icon} ${escapeHtml(group)}</span>
+                    <span class="tab-count">${count}</span>
+                `;
 
-function filterCommands(){
+                button.onclick = () => {
+                    currentGroup = group;
+                    createTabs();
+                    render();
+                };
 
-    render();
+                tabBar.appendChild(button);
+            });
+        }
 
-}
+        function filteredCommands() {
+            const search = normalize(document.getElementById("searchBar").value);
 
-async function copyCommand(command){
+            return allCommands.filter(cmd => {
+                if (currentGroup !== "All") {
+                    if ((cmd.Group || "General") !== currentGroup) return false;
+                }
 
-    try{
+                if (search === "") return true;
 
-        await navigator.clipboard.writeText(command);
+                return [
+                    cmd.Trigger,
+                    cmd.Description,
+                    cmd.Group,
+                    cmd.Permissions
+                ].join(" ")
+                    .toLowerCase()
+                    .includes(search);
+            });
+        }
 
-        const toast=document.getElementById("toast");
+        function copyCommand(command) {
+            try {
+                navigator.clipboard.writeText(command);
 
-        toast.textContent=`Copied ${command}`;
+                const toast = document.getElementById("toast");
+                toast.textContent = `Copied ${command}`;
+                toast.classList.add("show");
 
-        toast.classList.add("show");
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 1800);
+            } catch {
+                alert(command);
+            }
+        }
 
-        setTimeout(()=>{
+        function render() {
+            const container = document.getElementById("commandContainer");
+            const commands = filteredCommands();
 
-            toast.classList.remove("show");
-
-        },1800);
-
-    }
-    catch{
-
-        alert(command);
-
-    }
-
-}
-
-async function loadCommands(){
-
-    try{
-
-        const response=await fetch(
-
-            "commands.json",
-
-            {
-
-                cache:"no-store"
-
+            if (commands.length === 0) {
+                container.innerHTML = `
+                    <div class="empty">
+                        <h2>No commands found</h2>
+                        <p>Try another search or category.</p>
+                    </div>
+                `;
+                return;
             }
 
-        );
+            container.innerHTML = commands.map(cmd => `
+                <div class="command-card" onclick="copyCommand('${escapeHtml(cmd.Trigger)}')">
+                    <div class="command-top">
+                        <span class="command-pill">${escapeHtml(cmd.Trigger)}</span>
+                        <span class="badge ${permissionClass(cmd.Permissions)}">${permissionLabel(cmd.Permissions)}</span>
+                    </div>
 
-        allCommands=await response.json();
+                    <div class="description">
+                        ${escapeHtml(cmd.Description)}
+                    </div>
 
-        document.getElementById("lastUpdated").textContent=
+                    <div class="card-footer">
+                        <span>${GROUP_ICONS[cmd.Group] ?? "📁"} ${escapeHtml(cmd.Group || "General")}</span>
+                        <span>📋 Click to copy</span>
+                    </div>
+                </div>
+            `).join("");
+        }
 
-            new Date().toLocaleString();
+        function filterCommands() {
+            render();
+        }
 
-        createTabs();
+        async function loadCommands() {
+            try {
+                const response = await fetch("commands.json", { cache: "no-store" });
+                allCommands = await response.json();
 
-        render();
+                document.getElementById("lastUpdated").textContent =
+                    new Date().toLocaleString();
 
-    }
-    catch(e){
+                createTabs();
+                render();
+            } catch (e) {
+                document.getElementById("commandContainer").innerHTML = `
+                    <div class="empty">
+                        <h2>Failed to load commands</h2>
+                        <p>Check commands.json and refresh the page.</p>
+                    </div>
+                `;
+                console.error(e);
+            }
+        }
 
-        document.getElementById("commandContainer").innerHTML=`
-
-        <div class="empty">
-
-            Failed to load commands.
-
-        </div>
-
-        `;
-
-        console.error(e);
-
-    }
-
-}
-
-document.addEventListener(
-
-    "DOMContentLoaded",
-
-    loadCommands
-
-);
-
-</script>
-
+        document.addEventListener("DOMContentLoaded", loadCommands);
+    </script>
 </body>
-
 </html>
