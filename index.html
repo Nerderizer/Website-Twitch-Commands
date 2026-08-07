@@ -1,89 +1,212 @@
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stream Commands</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Stream Commands</h1>
+            <p>Available chat commands for the UserID10T Twitch channel.</p>
+            <div class="last-updated">
+                Last updated: <span id="lastUpdated">Loading...</span>
+            </div>
+        </div>
 
-    <div class="header">
-        <h1>🎮 Stream Commands</h1>
+        <div class="search-wrapper">
+            <input
+                id="searchBar"
+                class="search-box"
+                type="text"
+                placeholder="🔍 Search commands..."
+                oninput="filterTable()">
+        </div>
 
-        <p>
-            Available chat commands for the UserID10T Twitch channel.
-        </p>
+        <div class="stats">
+            <div class="stat">
+                <div id="totalCommands" class="stat-number">0</div>
+                <div class="stat-label">Commands</div>
+            </div>
+            <div class="stat">
+                <div id="totalGroups" class="stat-number">0</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat">
+                <div id="publicCommands" class="stat-number">0</div>
+                <div class="stat-label">Public</div>
+            </div>
+        </div>
 
-        <div class="last-updated">
-            Last updated:
-            <span id="lastUpdated">Loading...</span>
+        <div class="card">
+            <table id="commandTable">
+                <thead>
+                    <tr>
+                        <th width="30%">Command</th>
+                        <th width="55%">Description</th>
+                        <th width="15%" class="hide-mobile">Access</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="3" style="padding:50px;text-align:center;">Loading commands...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            Commands automatically generated from Streamer.bot.
         </div>
     </div>
 
-    <div class="search-wrapper">
-        <input
-            id="searchBar"
-            class="search-box"
-            type="text"
-            placeholder="🔍 Search commands..."
-            onkeyup="filterTable()">
-    </div>
+    <script>
+        let allCommands = [];
+        const commandTable = document.getElementById("commandTable");
+        const tableBody = document.getElementById("tableBody");
+        const searchBar = document.getElementById("searchBar");
 
-    <div class="stats">
+        function normalizeText(value) {
+            return (value || "").toString().toLowerCase();
+        }
 
-        <div class="stat">
-            <div id="totalCommands" class="stat-number">0</div>
-            <div class="stat-label">Commands</div>
-        </div>
+        function getPermissionClass(permission) {
+            const p = normalizeText(permission);
+            if (p.includes("broadcaster")) return "broadcaster";
+            if (p.includes("mod")) return "mod";
+            if (p.includes("vip")) return "vip";
+            return "everyone";
+        }
 
-        <div class="stat">
-            <div id="totalGroups" class="stat-number">0</div>
-            <div class="stat-label">Categories</div>
-        </div>
+        function buildRows(commands) {
+            const groups = new Map();
+            commands.forEach(cmd => {
+                const group = cmd.Group || "Ungrouped";
+                if (!groups.has(group)) groups.set(group, []);
+                groups.get(group).push(cmd);
+            });
 
-        <div class="stat">
-            <div id="publicCommands" class="stat-number">0</div>
-            <div class="stat-label">Public</div>
-        </div>
+            const groupNames = Array.from(groups.keys()).sort((a, b) => a.localeCompare(b));
+            let html = "";
 
-    </div>
+            groupNames.forEach(groupName => {
+                html += `
+                    <tr class="group-row">
+                        <td colspan="3">${groupName}</td>
+                    </tr>
+                `;
 
-    <div class="card">
+                groups.get(groupName).forEach(cmd => {
+                    const trigger = cmd.Trigger || "";
+                    const description = cmd.Description || "";
+                    const permissions = cmd.Permissions || "Everyone";
+                    const permClass = getPermissionClass(permissions);
 
-        <table id="commandTable">
+                    html += `
+                        <tr>
+                            <td><span class="command">${escapeHtml(trigger)}</span></td>
+                            <td>${escapeHtml(description)}</td>
+                            <td class="hide-mobile">
+                                <span class="badge ${permClass}">${escapeHtml(permissions)}</span>
+                            </td>
+                        </tr>
+                    `;
+                });
+            });
 
-            <thead>
+            return html;
+        }
 
-                <tr>
+        function escapeHtml(text) {
+            return String(text)
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#39;");
+        }
 
-                    <th width="30%">Command</th>
+        function updateStats(commands) {
+            const totalCommands = commands.length;
+            const groups = new Set(commands.map(c => c.Group || "Ungrouped"));
+            const publicCommands = commands.filter(c => normalizeText(c.Permissions).includes("everyone")).length;
 
-                    <th width="55%">Description</th>
+            document.getElementById("totalCommands").textContent = totalCommands;
+            document.getElementById("totalGroups").textContent = groups.size;
+            document.getElementById("publicCommands").textContent = publicCommands;
+        }
 
-                    <th width="15%" class="hide-mobile">
-                        Access
-                    </th>
+        function filterTable() {
+            const query = normalizeText(searchBar.value);
 
-                </tr>
+            if (!allCommands.length) return;
 
-            </thead>
+            const filtered = allCommands.filter(cmd => {
+                const haystack = [
+                    cmd.Trigger,
+                    cmd.Description,
+                    cmd.Group,
+                    cmd.Permissions
+                ].map(normalizeText).join(" ");
 
-            <tbody id="tableBody">
+                return haystack.includes(query);
+            });
 
-                <tr>
+            renderTable(filtered);
+        }
 
-                    <td colspan="3"
-                        style="padding:50px;text-align:center;">
+        function renderTable(commands) {
+            if (!commands.length) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="3" style="padding:50px;text-align:center;">
+                            No commands found.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
 
-                        Loading commands...
+            tableBody.innerHTML = buildRows(commands);
+        }
 
-                    </td>
+        async function loadCommands() {
+            try {
+                const response = await fetch("commands.json", { cache: "no-store" });
 
-                </tr>
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
 
-            </tbody>
+                const data = await response.json();
 
-        </table>
+                if (!Array.isArray(data)) {
+                    throw new Error("commands.json is not an array");
+                }
 
-    </div>
+                allCommands = data;
 
-    <div class="footer">
+                document.getElementById("lastUpdated").textContent =
+                    new Date().toLocaleString();
 
-        Commands automatically generated from Streamer.bot.
+                updateStats(allCommands);
+                renderTable(allCommands);
+            } catch (error) {
+                console.error("Failed to load commands:", error);
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="3" style="padding:50px;text-align:center;">
+                            Failed to load commands.
+                        </td>
+                    </tr>
+                `;
+                document.getElementById("lastUpdated").textContent = "Error";
+            }
+        }
 
-    </div>
-
-</div>
+        document.addEventListener("DOMContentLoaded", loadCommands);
+    </script>
+</body>
+</html>
