@@ -221,15 +221,27 @@ Cards
 #commandContainer{
 
     display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
 
-    grid-template-columns:
-        repeat(
-            auto-fill,
-            minmax(340px,1fr)
-        );
+}
 
-    gap:18px;
+@media(max-width:1400px){
+    #commandContainer{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
 
+@media(max-width:1000px){
+    #commandContainer{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:650px){
+    #commandContainer{
+        grid-template-columns:1fr;
+    }
 }
 
 .command-card{
@@ -240,7 +252,7 @@ Cards
 
     border-radius:18px;
 
-    padding:18px;
+    padding:14px;
 
     transition:.18s;
 
@@ -268,7 +280,7 @@ Cards
 
     gap:10px;
 
-    margin-bottom:16px;
+    margin-bottom:10px;
 
 }
 
@@ -307,7 +319,7 @@ Description
 
     color:var(--text2);
 
-    line-height:1.55;
+    line-height:1.35;
 
     font-size:.95rem;
 
