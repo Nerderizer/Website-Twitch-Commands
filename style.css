@@ -1,279 +1,292 @@
-/* ===========================================
-   UserID10T Commands Dashboard
-   =========================================== */
+/*====================================================
+  UserID10T Twitch Commands
+====================================================*/
 
 :root{
+
     --bg:#0e0e10;
-    --card:#18181b;
-    --card-hover:#202024;
+    --surface:#18181b;
+    --surface2:#202024;
+
     --border:#303032;
 
     --accent:#9147ff;
-    --accent-hover:#a970ff;
+    --accentHover:#a970ff;
 
     --text:#efeff1;
-    --text-muted:#adadb8;
+    --text2:#adadb8;
 
-    --everyone:#00d084;
-    --vip:#9147ff;
-    --mod:#1d9bf0;
-    --broadcaster:#ff5c5c;
+    --green:#00d084;
+    --blue:#2aa8ff;
+    --red:#ff6b6b;
+    --purple:#bf94ff;
 
-    --shadow:0 12px 30px rgba(0,0,0,.35);
+    --shadow:
+        0 12px 35px rgba(0,0,0,.35);
+
 }
 
 *{
     box-sizing:border-box;
 }
 
+html{
+
+    scroll-behavior:smooth;
+
+}
+
 body{
+
     margin:0;
-    padding:40px;
+
     background:var(--bg);
+
     color:var(--text);
-    font-family:Inter,Segoe UI,Roboto,sans-serif;
+
+    font-family:
+        Inter,
+        Segoe UI,
+        Roboto,
+        sans-serif;
+
 }
 
-.container{
-    max-width:1400px;
+/*====================================
+Page
+====================================*/
+
+.page{
+
+    max-width:1200px;
+
     margin:auto;
+
+    padding:40px 24px;
+
 }
 
-/* ===========================================
-   Header
-   =========================================== */
+/*====================================
+Header
+====================================*/
 
-.header{
+.hero{
+
     text-align:center;
-    margin-bottom:30px;
+
+    margin-bottom:32px;
+
 }
 
-.header h1{
+.hero h1{
+
     margin:0;
-    font-size:2.5rem;
-    font-weight:800;
+
+    font-size:3rem;
+
     color:var(--accent);
+
+    font-weight:800;
+
 }
 
-.header p{
-    margin-top:8px;
-    color:var(--text-muted);
-    font-size:1rem;
+.subtitle{
+
+    margin-top:10px;
+
+    color:var(--text2);
+
+    font-size:1.1rem;
+
 }
 
-.last-updated{
-    margin-top:14px;
-    font-size:.85rem;
+.updated{
+
+    margin-top:18px;
+
     color:#888;
+
+    font-size:.85rem;
+
 }
 
-/* ===========================================
-   Search
-   =========================================== */
+/*====================================
+Search
+====================================*/
 
-.search-wrapper{
+.search-area{
+
     position:sticky;
+
     top:15px;
-    z-index:50;
-    margin-bottom:25px;
+
+    z-index:500;
+
+    margin-bottom:22px;
+
 }
 
-.search-box{
+#searchBar{
+
     width:100%;
+
     padding:16px 20px;
 
-    background:#1f1f23;
-    color:white;
+    border:none;
 
-    border:1px solid var(--border);
+    outline:none;
+
     border-radius:14px;
+
+    background:var(--surface);
+
+    color:white;
 
     font-size:16px;
 
+    border:1px solid var(--border);
+
     transition:.2s;
+
 }
 
-.search-box:focus{
-
-    outline:none;
+#searchBar:focus{
 
     border-color:var(--accent);
 
     box-shadow:
-        0 0 0 4px rgba(145,71,255,.2);
-}
-
-/* ===========================================
-   Dashboard Stats
-   =========================================== */
-
-.stats{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:18px;
-
-    margin-bottom:25px;
+        0 0 0 4px
+        rgba(145,71,255,.25);
 
 }
 
-.stat{
+/*====================================
+Tabs
+====================================*/
 
-    background:var(--card);
+.tabs{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:28px;
+
+}
+
+.tab{
+
+    background:var(--surface);
+
+    color:var(--text2);
 
     border:1px solid var(--border);
 
-    border-radius:16px;
+    border-radius:999px;
 
-    padding:20px;
+    padding:10px 18px;
 
-    box-shadow:var(--shadow);
+    cursor:pointer;
 
-    text-align:center;
+    transition:.18s;
 
-}
-
-.stat-number{
-
-    font-size:2rem;
-
-    font-weight:700;
-
-    color:var(--accent);
+    font-size:.95rem;
 
 }
 
-.stat-label{
+.tab:hover{
 
-    color:var(--text-muted);
+    background:var(--surface2);
 
-    margin-top:6px;
-
-}
-
-/* ===========================================
-   Card
-   =========================================== */
-
-.card{
-
-    background:var(--card);
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    border:1px solid var(--border);
-
-    box-shadow:var(--shadow);
+    color:white;
 
 }
 
-/* ===========================================
-   Table
-   =========================================== */
-
-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-}
-
-thead th{
-
-    position:sticky;
-
-    top:85px;
+.tab.active{
 
     background:var(--accent);
 
     color:white;
 
-    padding:16px;
-
-    font-size:13px;
-
-    text-transform:uppercase;
-
-    letter-spacing:.08em;
-
-    text-align:left;
-
-    z-index:5;
+    border-color:var(--accent);
 
 }
 
-td{
+/*====================================
+Cards
+====================================*/
 
-    padding:16px;
+#commandContainer{
 
-    border-bottom:1px solid var(--border);
+    display:grid;
 
-    vertical-align:middle;
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(340px,1fr)
+        );
 
-    font-size:15px;
-
-}
-
-tbody tr{
-
-    transition:.15s;
-
-}
-
-tbody tr:hover{
-
-    background:var(--card-hover);
-
-    transform:translateX(4px);
+    gap:18px;
 
 }
 
-/* ===========================================
-   Group Rows
-   =========================================== */
+.command-card{
 
-.group-row td{
+    background:var(--surface);
 
-    background:#232329;
+    border:1px solid var(--border);
 
-    color:var(--text-muted);
+    border-radius:18px;
 
-    font-size:13px;
+    padding:18px;
 
-    font-weight:700;
+    transition:.18s;
 
-    text-transform:uppercase;
-
-    letter-spacing:.15em;
-
-    padding:14px 18px;
+    box-shadow:var(--shadow);
 
 }
 
-/* ===========================================
-   Command Pill
-   =========================================== */
+.command-card:hover{
 
-.command{
+    transform:translateY(-4px);
 
-    display:inline-block;
+    border-color:var(--accent);
 
-    padding:6px 12px;
+    background:var(--surface2);
+
+}
+
+.command-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:16px;
+
+}
+
+/*====================================
+Command Pill
+====================================*/
+
+.command-pill{
 
     background:#26262c;
 
-    border:1px solid #3d3d44;
+    color:var(--purple);
 
-    border-radius:9px;
+    border:1px solid #444;
 
-    color:#bf94ff;
+    border-radius:10px;
 
-    font-weight:700;
+    padding:7px 12px;
 
     font-family:
         "JetBrains Mono",
@@ -282,21 +295,35 @@ tbody tr:hover{
 
     font-size:15px;
 
+    font-weight:700;
+
 }
 
-/* ===========================================
-   Permission Badges
-   =========================================== */
+/*====================================
+Description
+====================================*/
+
+.description{
+
+    color:var(--text2);
+
+    line-height:1.55;
+
+    font-size:.95rem;
+
+}
+
+/*====================================
+Badges
+====================================*/
 
 .badge{
 
-    display:inline-block;
-
-    padding:6px 10px;
-
     border-radius:999px;
 
-    font-size:12px;
+    padding:6px 12px;
+
+    font-size:.75rem;
 
     font-weight:700;
 
@@ -306,86 +333,165 @@ tbody tr:hover{
 
 .everyone{
 
-    background:rgba(0,208,132,.18);
+    color:var(--green);
 
-    color:var(--everyone);
+    background:rgba(0,208,132,.15);
 
 }
 
 .vip{
 
-    background:rgba(145,71,255,.18);
+    color:#d4b2ff;
 
-    color:#c8a6ff;
+    background:rgba(145,71,255,.18);
 
 }
 
 .mod{
 
-    background:rgba(29,155,240,.18);
+    color:#87d2ff;
 
-    color:#7cc8ff;
+    background:rgba(42,168,255,.18);
 
 }
 
 .broadcaster{
 
-    background:rgba(255,92,92,.18);
+    color:#ffb2b2;
 
-    color:#ff9d9d;
+    background:rgba(255,107,107,.18);
 
 }
 
-/* ===========================================
-   Footer
-   =========================================== */
+/*====================================
+Loading
+====================================*/
 
-.footer{
+.loading,
+.empty{
 
-    margin-top:25px;
+    grid-column:1/-1;
 
     text-align:center;
 
-    color:#777;
+    padding:80px;
 
-    font-size:.85rem;
+    color:var(--text2);
+
+    background:var(--surface);
+
+    border-radius:18px;
+
+    border:1px solid var(--border);
 
 }
 
-/* ===========================================
-   Mobile
-   =========================================== */
+/*====================================
+Toast
+====================================*/
+
+.toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:999px;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.25s;
+
+}
+
+.toast.show{
+
+    opacity:1;
+
+}
+
+/*====================================
+Scrollbar
+====================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#333;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#555;
+
+}
+
+/*====================================
+Responsive
+====================================*/
 
 @media(max-width:900px){
 
-.stats{
+    .hero h1{
 
-    grid-template-columns:1fr;
+        font-size:2.3rem;
 
-}
+    }
 
-.hide-mobile{
+    #commandContainer{
 
-    display:none;
+        grid-template-columns:1fr;
 
-}
-
-thead th{
-
-    top:75px;
+    }
 
 }
 
-body{
+@media(max-width:600px){
 
-    padding:20px;
+    .page{
 
-}
+        padding:20px;
 
-.header h1{
+    }
 
-    font-size:2rem;
+    .tabs{
 
-}
+        justify-content:center;
+
+    }
+
+    .command-top{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
 
 }
