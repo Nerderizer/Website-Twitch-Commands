@@ -1,5 +1,11 @@
 [
   {
+    "Trigger": "!throw",
+    "Description": "Throws an item at the nearest viewer's Pixel Art Avatar, or at the targeted avatar provided. Usage: !throw <itemname>, !throw <itemname> <targetuser>",
+    "Group": "General",
+    "Permissions": "Everyone"
+  },
+  {
     "Trigger": "!boop, !boops",
     "Description": "Boop another user. Usage: !boop <username>",
     "Group": "Interactive Commands w/ Consent",
