@@ -1,11 +1,5 @@
 [
   {
-    "Trigger": "!throw",
-    "Description": "Throws an item at the nearest viewer's Pixel Art Avatar, or at the targeted avatar provided. Usage: !throw <itemname>, !throw <itemname> <targetuser>",
-    "Group": "General",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!boop, !boops",
     "Description": "Boop another user. Usage: !boop <username>",
     "Group": "Interactive Commands w/ Consent",
@@ -86,6 +80,12 @@
   {
     "Trigger": "!analyze ",
     "Description": "Use AI to analyze the current gameplay by capturing screenshots. This is a cool one.",
+    "Group": "Mod Commands",
+    "Permissions": "Moderator"
+  },
+  {
+    "Trigger": "!awardloot",
+    "Description": "Awards Random Loot Items to the targeted user or active chatters.",
     "Group": "Mod Commands",
     "Permissions": "Moderator"
   },
@@ -182,6 +182,12 @@
   {
     "Trigger": "!jump",
     "Description": "Make your avatar jump up and down on-screen.",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!throw",
+    "Description": "Throws an item at the nearest viewer's Pixel Art Avatar, or at the targeted avatar provided. Usage: !throw <itemname>, !throw <itemname> <targetuser>",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
