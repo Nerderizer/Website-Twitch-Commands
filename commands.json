@@ -1,73 +1,7 @@
 [
   {
-    "Trigger": "!boop, !boops",
-    "Description": "Boop another user. Usage: !boop <username>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!consent",
-    "Description": "Review Consent settings. Toggle your Consent for a given action. Usage: !consent, !consent <consent action>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!cuddle, !cuddles",
-    "Description": "Cuddle another user. Usage: !cuddle <username>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!headpat, !headpats",
-    "Description": "Headpat another user. Usage: !headpat <username>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!hug, !hugs",
-    "Description": "Hug another user. Usage: !hug <username>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!lick, !licks",
-    "Description": "Lick another user. Usage: !lick <username>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!meme, !memes",
-    "Description": "Meme on another user. Usage: !meme <username>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!moan, !moans",
-    "Description": "Moan at another user. Usage: !moan <username>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!slap",
     "Description": "Slap another user. Usage: !slap <username>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!spank, !spanks",
-    "Description": "Spank another user. Usage: !spank <username>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!tickle, !tickles",
-    "Description": "Tickle another user. Usage: !tickle <username>",
-    "Group": "Interactive Commands w/ Consent",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!whip, !whips",
-    "Description": "Whip another user. Usage: !whip <username>",
     "Group": "Interactive Commands w/ Consent",
     "Permissions": "Everyone"
   },
