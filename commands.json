@@ -2,37 +2,37 @@
   {
     "Trigger": "!acceptduel",
     "Description": "Accept a pending duel challenge. Usage: !acceptduel",
-    "Group": "General",
+    "Group": "Games",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!coinflip",
     "Description": "Flip a coin and see whether it lands on heads or tails. Usage: !coinflip",
-    "Group": "General",
+    "Group": "Games",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!declineduel",
     "Description": "Decline a pending duel challenge. Usage: !declineduel",
-    "Group": "General",
+    "Group": "Games",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!duel",
     "Description": "Challenge another viewer to a duel. Choose from Boxing, Sword Fighting, Racing, Quick Draw, Wizard Battle, Card Battle, Fencing, or Rock Paper Scissors. Usage: !duel @username [type] — or use !duel @username, then select the duel type. The challenged viewer accepts with !acceptduel or declines with !declineduel.",
-    "Group": "General",
+    "Group": "Games",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!stats",
     "Description": "View your overall viewer stats, including Prize Tickets, collection, loot activity, throws, trades, and other tracked achievements. Usage: !stats [username]",
-    "Group": "General",
+    "Group": "Games",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!trivia",
     "Description": "Start a game trivia challenge based on the current game/category. Usage: !trivia",
-    "Group": "General",
+    "Group": "Games",
     "Permissions": "Everyone"
   },
   {
