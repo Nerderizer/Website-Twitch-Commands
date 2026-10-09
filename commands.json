@@ -144,6 +144,24 @@
     "Permissions": "Everyone"
   },
   {
+    "Trigger": "!fish, !cast",
+    "Description": "!fish",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!fishpb",
+    "Description": "!fishpb",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!fishrank, !fishranks, !fishlb",
+    "Description": "!fishrank",
+    "Group": "Pixel Avatar Commands",
+    "Permissions": "Everyone"
+  },
+  {
     "Trigger": "!hair",
     "Description": "Change your avatars hair style to the corresponding style number. Add the number corresponding to the style in the on-screen legend. Usage: !hair <style number>",
     "Group": "Pixel Avatar Commands",
