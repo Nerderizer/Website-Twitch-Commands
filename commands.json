@@ -24,6 +24,12 @@
     "Permissions": "Everyone"
   },
   {
+    "Trigger": "!slots",
+    "Description": "Spin the slots and win Prize Tickets. Usage: !slots",
+    "Group": "Games",
+    "Permissions": "Everyone"
+  },
+  {
     "Trigger": "!stats",
     "Description": "View your overall viewer stats, including Prize Tickets, collection, loot activity, throws, trades, and other tracked achievements. Usage: !stats [username]",
     "Group": "Games",
