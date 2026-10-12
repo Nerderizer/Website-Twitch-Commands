@@ -300,6 +300,12 @@
     "Permissions": "Everyone"
   },
   {
+    "Trigger": "!cliprivals",
+    "Description": "Share the Clip Rivals challenge link.",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
     "Trigger": "!command, !commands",
     "Description": "Post the link to my Commands List.",
     "Group": "Viewer Commands",
@@ -368,6 +374,12 @@
   {
     "Trigger": "!unlurk",
     "Description": "Comeback to chat and post an unlurk.",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!vote",
+    "Description": "Vote for a Clip Rivals clip. Usage: !vote <code>",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   }
