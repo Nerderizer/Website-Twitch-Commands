@@ -66,6 +66,12 @@
     "Permissions": "Moderator"
   },
   {
+    "Trigger": "!cliprivalsannounce",
+    "Description": "Announce the latest Clip Rivals winner.",
+    "Group": "Mod Commands",
+    "Permissions": "Moderator"
+  },
+  {
     "Trigger": "!end",
     "Description": "Use at the end of stream to post socials and Copy/pasta for raid message.",
     "Group": "Mod Commands",
