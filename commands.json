@@ -355,7 +355,13 @@
   },
   {
     "Trigger": "!quote",
-    "Description": "Show off a random or selected quote. Add a quote number to pick one. Usage: !quote, !quote <quote number>",
+    "Description": "Show a random or selected quote. Search quote text with a word or @username. Usage: !quote, !quote <quote number>, !quote <search text>",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!searchquote",
+    "Description": "Search quotes by text and list matching quote numbers. Usage: !searchquote <word or @username>",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
