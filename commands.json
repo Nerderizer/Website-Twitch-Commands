@@ -30,12 +30,6 @@
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!raidvote",
-    "Description": "Vote for the crew approach with !raidvote 1, !raidvote 2, or !raidvote 3.",
-    "Group": "Games",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!slots",
     "Description": "Spin the slots and win Prize Tickets. Usage: !slots",
     "Group": "Games",
