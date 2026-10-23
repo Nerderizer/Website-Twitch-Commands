@@ -6,14 +6,14 @@
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!coinflip",
-    "Description": "Flip a coin and see whether it lands on heads or tails. Usage: !coinflip",
+    "Trigger": "!arcaderaid",
+    "Description": "Start or join an Arcade Raid with !arcaderaid; duplicate entries are ignored.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!crew",
-    "Description": "Join the Arcade Raid crew with !crew; duplicate joins are ignored.",
+    "Trigger": "!coinflip",
+    "Description": "Flip a coin and see whether it lands on heads or tails. Usage: !coinflip",
     "Group": "Games",
     "Permissions": "Everyone"
   },
