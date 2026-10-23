@@ -6,6 +6,12 @@
     "Permissions": "Everyone"
   },
   {
+    "Trigger": "!arcaderaid",
+    "Description": "Join the Arcade Raid crew. First viewer starts a new raid; join window is 30 seconds after briefing.",
+    "Group": "Games",
+    "Permissions": "Everyone"
+  },
+  {
     "Trigger": "!coinflip",
     "Description": "Flip a coin and see whether it lands on heads or tails. Usage: !coinflip",
     "Group": "Games",
@@ -20,6 +26,12 @@
   {
     "Trigger": "!duel",
     "Description": "Challenge another viewer to a duel. Choose from Boxing, Sword Fighting, Racing, Quick Draw, Wizard Battle, Card Battle, Fencing, or Rock Paper Scissors. Usage: !duel @username [type] — or use !duel @username, then select the duel type. The challenged viewer accepts with !acceptduel or declines with !declineduel.",
+    "Group": "Games",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!raidvote",
+    "Description": "Vote for the crew approach with !raidvote 1, !raidvote 2, or !raidvote 3.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
