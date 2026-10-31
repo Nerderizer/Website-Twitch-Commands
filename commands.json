@@ -6,8 +6,8 @@
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!arcaderaid",
-    "Description": "Start or join an Arcade Raid with !arcaderaid; duplicate entries are ignored.",
+    "Trigger": "!arcaderaid, !joinraid",
+    "Description": "Start or join an Arcade Raid. Use !arcaderaid to start or !joinraid to join an open raid.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
