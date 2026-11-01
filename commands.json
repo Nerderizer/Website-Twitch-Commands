@@ -1,11 +1,5 @@
 [
   {
-    "Trigger": "!acceptduel",
-    "Description": "Accept a pending duel challenge. Usage: !acceptduel",
-    "Group": "Games",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!arcaderaid, !joinraid",
     "Description": "Start or join an Arcade Raid. Use !arcaderaid to start or !joinraid to join an open raid.",
     "Group": "Games",
@@ -18,20 +12,14 @@
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!declineduel",
-    "Description": "Decline a pending duel challenge. Usage: !declineduel",
-    "Group": "Games",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!duel",
-    "Description": "Challenge another viewer to a duel or fight. Choose from Boxing, Sword Fighting, Racing, Quick Draw, Wizard Battle, Card Battle, Fencing, or Rock Paper Scissors. Usage: !duel or !fight @username [type].",
+    "Description": "Challenge someone to a duel. Usage: !duel @username [type] or !fight @username [type]. If no type is given, the challenger picks with !duel <type> or !fight <type>. The opponent responds with !duel accept or !duel decline.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!fight",
-    "Description": "Challenge another viewer to a duel or fight. Usage: !fight @username [type] — or use !fight @username, then select the duel type. The challenged viewer accepts with !acceptduel or declines with !declineduel.",
+    "Description": "Challenge someone to a duel. Usage: !fight @username [type] or !duel @username [type]. If no type is given, the challenger picks with !fight <type> or !duel <type>. The opponent responds with !duel accept or !duel decline.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
@@ -43,7 +31,7 @@
   },
   {
     "Trigger": "!stats",
-    "Description": "View your overall viewer stats, including Prize Tickets, collection, loot activity, throws, trades, and other tracked achievements. Usage: !stats [username]",
+    "Description": "View concise balances, collection size, and game records. Usage: !stats [username]",
     "Group": "Games",
     "Permissions": "Everyone"
   },
