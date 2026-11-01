@@ -25,7 +25,13 @@
   },
   {
     "Trigger": "!duel",
-    "Description": "Challenge another viewer to a duel. Choose from Boxing, Sword Fighting, Racing, Quick Draw, Wizard Battle, Card Battle, Fencing, or Rock Paper Scissors. Usage: !duel @username [type] — or use !duel @username, then select the duel type. The challenged viewer accepts with !acceptduel or declines with !declineduel.",
+    "Description": "Challenge another viewer to a duel or fight. Choose from Boxing, Sword Fighting, Racing, Quick Draw, Wizard Battle, Card Battle, Fencing, or Rock Paper Scissors. Usage: !duel or !fight @username [type].",
+    "Group": "Games",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!fight",
+    "Description": "Challenge another viewer to a duel or fight. Usage: !fight @username [type] — or use !fight @username, then select the duel type. The challenged viewer accepts with !acceptduel or declines with !declineduel.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
