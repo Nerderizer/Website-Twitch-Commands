@@ -324,7 +324,7 @@
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!inventory",
+    "Trigger": "!inventory, !inv",
     "Description": "View your inventory. Use a listed item name with !throw <item name>.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
@@ -362,6 +362,12 @@
   {
     "Trigger": "!sub",
     "Description": "Post a reminder that subscriptions help produce more cool content to enjoy!",
+    "Group": "Viewer Commands",
+    "Permissions": "Everyone"
+  },
+  {
+    "Trigger": "!trickortreat",
+    "Description": "Collect a permanent Halloween treat. Use !trickortreat; one treat every 10 minutes through November 7, 2026.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
