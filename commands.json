@@ -336,8 +336,8 @@
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!items, !inv, !inventory",
-    "Description": "Show your Inventory Items.",
+    "Trigger": "!inventory",
+    "Description": "View your inventory. Item names are ready for !throw <item name>.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
