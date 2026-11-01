@@ -1,31 +1,31 @@
 [
   {
     "Trigger": "!arcaderaid, !joinraid",
-    "Description": "Start or join an Arcade Raid. Use !arcaderaid to start or !joinraid to join an open raid.",
+    "Description": "Start an Arcade Raid with !arcaderaid. Join an open raid with !joinraid; !arcaderaid also joins if one is already open.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!coinflip",
-    "Description": "Flip a coin and see whether it lands on heads or tails. Usage: !coinflip",
+    "Description": "Call heads or tails. Usage: !coinflip heads or !coinflip tails.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!duel",
-    "Description": "Challenge someone to a duel. Usage: !duel @username [type] or !fight @username [type]. If no type is given, the challenger picks with !duel <type> or !fight <type>. The opponent responds with !duel accept or !duel decline.",
+    "Description": "Challenge someone: !duel @username [type]. If omitted, choose a type within 30 seconds with !duel <type>. The opponent replies !duel accept or !duel decline.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!fight",
-    "Description": "Challenge someone to a duel. Usage: !fight @username [type] or !duel @username [type]. If no type is given, the challenger picks with !fight <type> or !duel <type>. The opponent responds with !duel accept or !duel decline.",
+    "Description": "Challenge someone: !fight @username [type]. If omitted, choose a type within 30 seconds with !fight <type>. The opponent replies !duel accept or !duel decline.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!slots",
-    "Description": "Spin the slots and win Prize Tickets. Usage: !slots",
+    "Description": "Spin the slots for Prize Tickets. Each spin costs 1 Token. Usage: !slots.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
@@ -37,7 +37,7 @@
   },
   {
     "Trigger": "!trivia",
-    "Description": "Start a game trivia challenge based on the current game/category. Usage: !trivia",
+    "Description": "Start game trivia, then answer A, B, C, or D in chat within 30 seconds. Usage: !trivia.",
     "Group": "Games",
     "Permissions": "Everyone"
   },
@@ -132,12 +132,6 @@
     "Permissions": "Everyone"
   },
   {
-    "Trigger": "!accepttrade",
-    "Description": "Accept a pending trade. Usage: !accepttrade",
-    "Group": "Pixel Avatar Commands",
-    "Permissions": "Everyone"
-  },
-  {
     "Trigger": "!canceltrade",
     "Description": "Cancel your pending trade. Usage: !canceltrade",
     "Group": "Pixel Avatar Commands",
@@ -145,55 +139,49 @@
   },
   {
     "Trigger": "!color",
-    "Description": "Change your avatars outfit color to the corresponding color number. Add the number corresponding to the color in the on-screen legend. Usage: !color <color number>",
-    "Group": "Pixel Avatar Commands",
-    "Permissions": "Everyone"
-  },
-  {
-    "Trigger": "!declinetrade",
-    "Description": "Decline a pending trade. Usage: !declinetrade",
+    "Description": "Change your avatar outfit color using the numbered on-screen legend. Usage: !color <number>.",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!fish, !cast",
-    "Description": "!fish",
+    "Description": "Cast a line to catch fish. You can fish once every 3 minutes. Use !fish or !cast.",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!fishpb",
-    "Description": "!fishpb",
+    "Description": "View your best catches and collection. Add @username to view theirs: !fishpb [@username].",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!fishrank, !fishranks, !fishlb",
-    "Description": "!fishrank",
+    "Description": "View the fishing leaderboard or check a viewer rank. Usage: !fishrank [@username].",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!hair",
-    "Description": "Change your avatars hair style to the corresponding style number. Add the number corresponding to the style in the on-screen legend. Usage: !hair <style number>",
+    "Description": "Change your avatar hairstyle using the numbered on-screen legend. Usage: !hair <number>.",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!hcolor",
-    "Description": "Change your avatars hair color to the corresponding color number. Add the number corresponding to the color in the on-screen legend. Usage: !hcolor <color number>",
+    "Description": "Change your avatar hair color using the numbered on-screen legend. Usage: !hcolor <number>.",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!heart",
-    "Description": "Make your avatar spew hearts on-screen.",
+    "Description": "Make your avatar send hearts on-screen.",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!hey",
-    "Description": "Move your avatar to the target user's avatar on-screen. Add the user's name after the command. Usage: !hey <target name>",
+    "Description": "Move your avatar next to another viewer. Usage: !hey <username>.",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
@@ -205,103 +193,103 @@
   },
   {
     "Trigger": "!throw",
-    "Description": "Throws an item at the nearest viewer's Pixel Art Avatar, or at the targeted avatar provided. Usage: !throw <itemname>, !throw <itemname> <targetuser>",
+    "Description": "Throw an item from your inventory at a random viewer, or target someone with @username. Usage: !throw <item name> [@username].",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!trade",
-    "Description": "Trade an item with another viewer. Usage: !trade @username Item for Item",
+    "Description": "Offer one item in exchange for an item from another viewer. Usage: !trade @username <your item> for <their item>. They can reply !trade accept or !trade decline.",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!twerk, !dance",
-    "Description": "Your on-screen avatar will twerk and drop some peaches",
+    "Description": "Make your on-screen avatar dance and drop peaches.",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!walk",
-    "Description": "Move your avatar the number of pixels defined,  on-screen. Add the distance in number of pixels after the command. Usage: !walk <distance>",
+    "Description": "Move your avatar on-screen. Usage: !walk <pixel distance>.",
     "Group": "Pixel Avatar Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!pause",
-    "Description": "!pause",
+    "Description": "Pause the current song.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!play",
-    "Description": "!play",
+    "Description": "Resume the current song.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!queue",
-    "Description": "!queue",
+    "Description": "Show the current song request queue.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!skip, !skipsong",
-    "Description": "!skip",
+    "Description": "Skip the current song.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!song, !songname",
-    "Description": "!song",
+    "Description": "Show the currently playing song.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!sr",
-    "Description": "!sr",
+    "Description": "Request a song by title or YouTube link. Usage: !sr <song title or URL>.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!srForce, !srforce",
-    "Description": "!srForce",
+    "Description": "Moderator: force-add a song request by YouTube link. Usage: !srForce <YouTube URL>.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!stop",
-    "Description": "!stop",
+    "Description": "Stop the current song.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!volume, !vol",
-    "Description": "!volume",
+    "Description": "Set or adjust music volume: !volume 50, !volume +10, or !volume -10.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!voteskip, !skipvote",
-    "Description": "!voteskip",
+    "Description": "Vote to skip the current song. Usage: !voteskip.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!when",
-    "Description": "!when",
+    "Description": "Check when the next song is due to play.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!wrongsong, !songwrong",
-    "Description": "!wrongsong",
+    "Description": "Report that the current song is not the one requested. Usage: !wrongsong.",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!clip",
-    "Description": "Auto clip the last 30 seconds. Does not create a Clip Title.",
+    "Description": "Create a clip of the last 30 seconds. It will not get a title automatically.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
@@ -325,7 +313,7 @@
   },
   {
     "Trigger": "!followage",
-    "Description": "Share your current Follow age on twitch",
+    "Description": "Check how long you have followed the channel.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
@@ -337,13 +325,13 @@
   },
   {
     "Trigger": "!inventory",
-    "Description": "View your inventory. Item names are ready for !throw <item name>.",
+    "Description": "View your inventory. Use a listed item name with !throw <item name>.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!lurk",
-    "Description": "Show support by dropping a lurk!",
+    "Description": "Let chat know you are lurking. Usage: !lurk.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
@@ -385,13 +373,13 @@
   },
   {
     "Trigger": "!unlurk",
-    "Description": "Comeback to chat and post an unlurk.",
+    "Description": "Let chat know you are back. Usage: !unlurk.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!vote",
-    "Description": "Vote for a Clip Rivals clip. Usage: !vote <code>",
+    "Description": "Vote for a Clip Rivals clip. Usage: !vote <clip code>.",
     "Group": "Viewer Commands",
     "Permissions": "Everyone"
   }
