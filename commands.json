@@ -217,73 +217,73 @@
   },
   {
     "Trigger": "!pause",
-    "Description": "Pause the current song.",
+    "Description": "!pause",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!play",
-    "Description": "Resume the current song.",
+    "Description": "!play",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!queue",
-    "Description": "Show the current song request queue.",
+    "Description": "!queue",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!skip, !skipsong",
-    "Description": "Skip the current song.",
+    "Description": "!skip",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!song, !songname",
-    "Description": "Show the currently playing song.",
+    "Description": "!song",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!sr",
-    "Description": "Request a song by title or YouTube link. Usage: !sr <song title or URL>.",
+    "Description": "!sr",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!srForce, !srforce",
-    "Description": "Moderator: force-add a song request by YouTube link. Usage: !srForce <YouTube URL>.",
+    "Description": "!srForce",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!stop",
-    "Description": "Stop the current song.",
+    "Description": "!stop",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!volume, !vol",
-    "Description": "Set or adjust music volume: !volume 50, !volume +10, or !volume -10.",
+    "Description": "!volume",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!voteskip, !skipvote",
-    "Description": "Vote to skip the current song. Usage: !voteskip.",
+    "Description": "!voteskip",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!when",
-    "Description": "Check when the next song is due to play.",
+    "Description": "!when",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
   {
     "Trigger": "!wrongsong, !songwrong",
-    "Description": "Report that the current song is not the one requested. Usage: !wrongsong.",
+    "Description": "!wrongsong",
     "Group": "SongRequest",
     "Permissions": "Everyone"
   },
